@@ -1,5 +1,4 @@
-/* eslint-disable complexity */
-/* eslint-disable fp/no-let */
+/* eslint-disable  complexity, fp/no-let, sonarjs/cognitive-complexity */
 function isBalanced(input) {
   const stack = [];
 
@@ -45,10 +44,6 @@ function isBalanced(input) {
 
   return stack.length === 0;
 }
-
-// https://app.coderpad.io/RR92RAJ4
-
-// isBalanced('([]>)');
 
 console.log('([]) is balanced', isBalanced('([])'));
 console.log('([>]) is balanced', isBalanced('([>])'));
