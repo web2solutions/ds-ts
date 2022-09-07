@@ -1,4 +1,4 @@
-# Lista Duplamente Encadeada simples
+# Lista duplamente encadeada
 
 ## Representação
 
