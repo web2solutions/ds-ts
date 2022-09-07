@@ -20,5 +20,5 @@
 > (listas duplamente encadeadas) e outras fazem com que o ´ultimo n´o aponte para o
 > primeiro (listas circulares).
 
-1. [Lista Encadeada Simples](/src/ListasEncadeadas/Simples/README.md)
-2. [Lista Duplamente Encadeada](/src/ListasEncadeadas/DuplamenteEncadeada/README.md)
+1. [Lista Encadeada Simples](/src/ListasEncadeadas/Simples)
+2. [Lista Duplamente Encadeada](/src/ListasEncadeadas/DuplamenteEncadeada)
