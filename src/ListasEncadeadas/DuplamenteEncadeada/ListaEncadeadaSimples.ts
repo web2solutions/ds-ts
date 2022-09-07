@@ -33,7 +33,7 @@ export class ListaEncadeadaSimples {
         if (anterior) {
             anterior.proximo = node
         }
-        // changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
+        
         this._nos.splice(posicao, 0, node)
         return this._nos[posicao]
     }
@@ -74,15 +74,16 @@ export class ListaEncadeadaSimples {
 
     // limpar lista linkada
     public limpar (): void {
-        // 
+        this._nos = [];
     }
 
     // reverter ordem dos elementos na lista
     public reverse (): void {
-        // 
-    }
-
-    *[Symbol.iterator](): Generator<No, void, undefined> {
-        yield* this._nos
+        const copy = [...this._nos]
+        const tamanho = this.tamanho
+        this.limpar()
+        for(let posicao = tamanho - 1; posicao >= 0; posicao--) {
+            this.inserirEmUltimo(copy[posicao].valor)
+        }
     }
 }

@@ -2,7 +2,7 @@
 
 // http://sites.poli.usp.br/p/fabio.cozman/Didatico/Comp/Material/estruturas.pdf
 
-# Lista Encadeada simples
+# Listas Encadeadas
 
 > A vantagem é a flexibilidade na inserção e remoção de elementos. 
 > A desvantagem é que não temos acesso direto aos elementos.
@@ -19,3 +19,6 @@
 > elaboradas de listas encadeadas utilizam n´os com ponteiros para os n´os sucessor e antecessor 
 > (listas duplamente encadeadas) e outras fazem com que o ´ultimo n´o aponte para o
 > primeiro (listas circulares).
+
+1. [Lista Encadeada Simples](/src/ListasEncadeadas/Simples/README.md)
+2. [Lista Duplamente Encadeada](/src/ListasEncadeadas/DuplamenteEncadeada/README.md)
