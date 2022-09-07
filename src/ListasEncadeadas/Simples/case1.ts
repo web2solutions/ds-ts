@@ -15,6 +15,9 @@ console.log('==== reverter lista', lista.reverse())
 
 console.log('==== valores na lista', lista.valores) // [4, 5, 1, 2, 3]
 
+console.log('==== contem 5', lista.contem(5)) // true
+console.log('==== busca 3', lista.busca(3)) // { valor: 3, proximo: null }
+
 /*
 console.log('==== Tamanho da lista', lista.tamanho) // 5
 console.log('==== Cabeca da lista', lista.cabeca?.valor) // 2

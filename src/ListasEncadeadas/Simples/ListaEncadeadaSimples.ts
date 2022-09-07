@@ -63,10 +63,28 @@ export class ListaEncadeadaSimples {
         return this._nos[posicao]
     }
 
+    public contem(valor: number | string): boolean {
+        for(let posicao = 0; posicao < this.tamanho; posicao++) {
+            if(this._nos[posicao].valor === valor) {
+                return true
+            }
+        }
+        return false
+    }
+
     public busca(valor: number | string): No | null {
         for(let posicao = 0; posicao < this.tamanho; posicao++) {
             if(this._nos[posicao].valor === valor) {
                 return this._nos[posicao]
+            }
+        }
+        return null
+    }
+
+    public buscaPosicao(valor: number | string): number | null {
+        for(let posicao = 0; posicao < this.tamanho; posicao++) {
+            if(this._nos[posicao].valor === valor) {
+                return posicao
             }
         }
         return null
