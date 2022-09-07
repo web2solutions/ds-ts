@@ -81,13 +81,13 @@ export class ListaEncadeadaSimples {
         return null
     }
 
-    public buscaPosicao(valor: number | string): number | null {
+    public buscaPosicao(valor: number | string): number {
         for(let posicao = 0; posicao < this.tamanho; posicao++) {
             if(this._nos[posicao].valor === valor) {
                 return posicao
             }
         }
-        return null
+        return -1
     }
 
     // limpar lista linkada
