@@ -1,7 +1,7 @@
-import { ListaEncadeadaSimples } from './ListaEncadeadaSimples'
+import { ListaDuplamenteEncadeada } from './ListaDuplamenteEncadeada'
 
 
-const lista  = new ListaEncadeadaSimples()
+const lista  = new ListaDuplamenteEncadeada()
 
 console.log('--- inserir 1 em primeiro: ', lista.inserirEmPrimeiro(1))
 console.log('--- inserir 2 em primeiro: ', lista.inserirEmPrimeiro(2))

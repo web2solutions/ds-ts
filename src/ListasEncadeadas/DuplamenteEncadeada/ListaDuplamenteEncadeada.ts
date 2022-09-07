@@ -1,7 +1,7 @@
 // Interface Nó
 import { No } from "./No";
 
-export class ListaEncadeadaSimples {
+export class ListaDuplamenteEncadeada {
     private _nos: No[] = []
 
     public get tamanho(): number {
