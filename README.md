@@ -8,7 +8,7 @@ Antes de falar sobre dados e estrutura de dados, precisamos entender o que é um
 
 Podemos dizer grosseiramente que na computação o conceito de informação é a `reunião ou o conjunto de dados`.
 
-## O que é `dado`?
+## O que é um `dado`?
 
 Um dado é uma parte de uma informação manipulasa por um programa e que pode ser acessado através de um identificador, como um ponteiro ou uma variável.
 
@@ -24,12 +24,25 @@ Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dad
 ### Dados primitivos:
 
 - `Number`
+
+    É o tipo usado para manipular números.
+
+    ```
+        const ano: number = 2022
+    ```
+
 - `BigInt`
 
     É um objeto empacotador primitivo usado para lidar com dados BigInt, que são números `muito grande para serem manipulados` pelo tipo `number`.
     
 - `String`
+
+    É o tipo usado para manipular dados do tipo texto ou sequência de caracteres.
+
 - `Boolean`
+
+    É tipo usado para manipular valores lógicos como `verdadeiro` e `falso`.
+
 - `Symbol`
 
     Símbolos (ou atoms) são primitivos únicos e imutáveis e podem ser usados como uma chave de uma propriedade de um objeto.
