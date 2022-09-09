@@ -126,7 +126,7 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
 
     Ainda considerando apenas o Javascript, qual seria então a diferença entre as duas notações?
 
-    'O prototype que o objeto herdou'. Em Javascript, objetos são construídos com `protypes - protótipos`. Nesse caso o primeiro código herdou o protótipo do tipo `object` e o segundo herdou o protótipo do tipo `array`. Isso significa que os `métodos` e `propriedades` que fazem parte de cada uma das estruturas de dados, a API, sejam diferentes.
+    `O prototype que o objeto herdou`. Em Javascript, objetos são construídos com `protypes - protótipos`. Nesse caso o primeiro código herdou o protótipo do tipo `object` e o segundo herdou o protótipo do tipo `array`. Isso significa que os `métodos` e `propriedades` que fazem parte de cada uma das estruturas de dados, a API, sejam diferentes.
 
 - `Datas`
 
