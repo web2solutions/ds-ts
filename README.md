@@ -18,12 +18,27 @@ Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dad
 ### Dados primitivos:
 
 - `Number`
+- `BigInt`
+
+    É um objeto empacotador primitivo usado para lidar com dados BigInt, que são números `muito grande para serem manipulados` pelo tipo `number`.
+    
 - `String`
 - `Boolean`
 - `Symbol`
-- `BigInt`
+
+    Símbolos (ou atoms) são primitivos únicos e imutáveis e podem ser usados como uma chave de uma propriedade de um objeto.
+
 - `Undefined`
+
+    Utilizado para expressar um dado não definido / declarado.
+
 - `Null`
+
+    Utilizado quando de forma intencional a não ter nenhum dado atribuido.
+
+- `Nan`
+
+    É comumente encontrado quando o resultado de uma expressão aritmética não é um número válido.
 
 Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o armazenamento de `múltiplos dados`, é necessário utilizar os tipos de dados `não primitivos`.
 
@@ -76,3 +91,10 @@ Características das Estruturas de Dados:
 1. [Pilhas](/src/Pilhas)
 2. [Filas](/src/Filas)
 3. [Listas Encadeadas](/src/ListasEncadeadas)
+
+
+### Referências:
+
+- https://www.dimap.ufrn.br/~umberto/paed/lista04.pdf
+
+- http://sites.poli.usp.br/p/fabio.cozman/Didatico/Comp/Material/estruturas.pdf

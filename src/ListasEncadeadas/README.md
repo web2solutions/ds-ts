@@ -1,7 +1,3 @@
-// https://www.dimap.ufrn.br/~umberto/paed/lista04.pdf
-
-// http://sites.poli.usp.br/p/fabio.cozman/Didatico/Comp/Material/estruturas.pdf
-
 # Listas Encadeadas
 
 > A vantagem é a flexibilidade na inserção e remoção de elementos. 
