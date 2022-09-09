@@ -66,13 +66,26 @@ Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dad
 
     Utilizado para expressar um dado não definido / declarado.
 
+    ```javascript
+        function testarIndefinido(parametro) {
+            if (typof parametro === 'undefined') {
+                throw 'Você deve atribuir um valor ao parâmtero'
+            }
+            return 'O parâmetro está definido'
+        }
+    ```
+
 - `Null`
 
     Utilizado quando de forma intencional a não ter nenhum dado atribuido.
 
-- `Nan`
+- `NaN`
 
     É comumente encontrado quando o resultado de uma expressão aritmética não é um número válido.
+
+    ```javascript
+        console.log(parseInt('a')) // NaN
+    ```
 
 Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o armazenamento de `múltiplos dados`, é necessário utilizar os tipos de dados `não primitivos`.
 
@@ -80,9 +93,40 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
 
 - `Objetos`
     
-    Um objeto do JavaScript é um `mapeamento entre chaves e valores`. Chaves são Strings e valores podem ser de qualquer tipo. Isso faz com que objetos sejam perfeitos para `hashmaps`
+    Um objeto do JavaScript é um `mapeamento entre chaves e valores`. Chaves podem ser do tipo `String` e `Symbol`. Os valores podem ser de qualquer tipo. Isso faz com que objetos sejam perfeitos para `hashmaps`.
+
+    ```javascript
+        const objeto: Record<string|symbol, any> = {
+            'chave 1': 'texto',
+            'chave 1': 2,
+            'chave 3': 9007199254740991n,
+            'chave 4': function () {
+                return 'minha função'
+            }
+        }
+    ```
     
-    - `Array associativo`
+    - `Arranjo associativo`
+
+    Em Javascript, `arrays` também são `objetos`. Isso quer dizer que você poderia reescrever o objeto acima com a seguinte notação:
+
+    ```javascript 
+        const arranjoAssociativo = [];
+        arranjoAssociativo['chave 1'] = 'texto'
+        arranjoAssociativo['chave 2'] = 2
+        arranjoAssociativo['chave 3'] = 9007199254740991n
+        arranjoAssociativo['chave 4'] = function () {
+            return 'minha função'
+        }
+    ```
+
+    Observe que o código acima é somente válido como Javascript. Caso tente transpilar esse código com Typescript, você terá um erro como o exemplo á seguir:
+
+    `error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.`
+
+    Ainda considerando apenas o Javascript, qual seria então a diferença entre as duas notações?
+
+    'O prototype que o objeto herdou'. Em Javascript, objetos são construídos com `protypes - protótipos`. Nesse caso o primeiro código herdou o protótipo do tipo `object` e o segundo herdou o protótipo do tipo `array`. Isso significa que os `métodos` e `propriedades` que fazem parte de cada uma das estruturas de dados, a API, sejam diferentes.
 
 - `Datas`
 
