@@ -27,21 +27,34 @@ Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dad
 
     É o tipo usado para manipular números.
 
-    ```
+    ```javascript
         const ano: number = 2022
     ```
 
 - `BigInt`
 
     É um objeto empacotador primitivo usado para lidar com dados BigInt, que são números `muito grande para serem manipulados` pelo tipo `number`.
+
+    ```javascript
+        const numeroGrande1: BigInt = 9007199254740991n // conversão adicionando `n` no final do número
+        const numeroGrande2: BigInt = BigInt(9007199254740991) // conversão usando o empacotador BigInt()
+    ```
     
 - `String`
 
     É o tipo usado para manipular dados do tipo texto ou sequência de caracteres.
 
+    ```javascript
+        const nome: string = 'José Eduardo'
+    ```
+
 - `Boolean`
 
     É tipo usado para manipular valores lógicos como `verdadeiro` e `falso`.
+
+    ```javascript
+        const ceuAzul: boolean = true;
+    ```
 
 - `Symbol`
 
