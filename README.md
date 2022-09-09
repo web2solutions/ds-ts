@@ -2,7 +2,13 @@
 
 O propósito desse repositório é demonstrar e compartilhar com desenvolvedores da língua portuguesa a implementação das diversas estuturas de dados usando a linguagem Typescript.
 
-## O que é dado.
+Antes de falar sobre dados e estrutura de dados, precisamos entender o que é uma informação:
+
+## O que é uma `informação`?
+
+Podemos dizer grosseiramente que na computação o conceito de informação é a `reunião ou o conjunto de dados`.
+
+## O que é `dado`?
 
 Um dado é uma parte de uma informação manipulasa por um programa e que pode ser acessado através de um identificador, como um ponteiro ou uma variável.
 
