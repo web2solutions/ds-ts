@@ -1,20 +1,17 @@
 # Listas Encadeadas
+    
+    Uma Lista Encadeada é uma estrutura de dados do tipo container, ou seja, serve para armazenar elementos em uma certa ordem. 
+    A lista encadeada oferece operações de acesso geral, tais como inserção, remoção e busca arbitrária. 
+    Uma das características mais importantes de uma lista encadeada é seu caráter dinâmico, que permite armazenar um número de elementos limitado apenas pela memória disponível.
 
-> A vantagem é a flexibilidade na inserção e remoção de elementos. 
-> A desvantagem é que não temos acesso direto aos elementos.
-> Não existe algo equivalente ao índice para se acessar diretamente o elemento.
->
-> Uma Lista Encadeada ´e uma estrutura de dados do tipo container, ou seja, serve para
-> armazenar elementos em uma certa ordem. A lista encadeada oferece opera¸c˜oes de acesso
-> geral, tais como inser¸c˜ao, remo¸c˜ao e busca arbitr´aria. Uma das caracter´ısticas mais importantes 
-> de uma lista encadeada ´e seu car´ater dinˆamico, que permite armazenar um n´umero
-> de elementos limitado apenas pela mem´oria dispon´ıvel.
-> 
-> Uma lista encadeada consiste de uma sequˆencia linear de ¨ n´os dinamicamente alocados,
-> que s˜ao encadeados (ou conectados) atrav´es de ponteiros (ou apontadores). Vers˜oes mais
-> elaboradas de listas encadeadas utilizam n´os com ponteiros para os n´os sucessor e antecessor 
-> (listas duplamente encadeadas) e outras fazem com que o ´ultimo n´o aponte para o
-> primeiro (listas circulares).
+    Uma lista encadeada consiste de uma sequência linear de nós dinamicamente alocados, que são encadeados (ou conectados) através de ponteiros (ou apontadores). 
+    
+    Versões mais elaboradas de listas encadeadas utilizam nós com ponteiros para os nóss sucessor e antecessor (listas duplamente encadeadas) outras fazem com que o último nó aponte para o primeiro (listas circulares).
+
+    A vantagem é a flexibilidade na inserção e remoção de elementos. A desvantagem é que não temos acesso direto aos elementos.
+    Não existe algo equivalente ao índice para se acessar diretamente o elemento.
+
+
 
 1. [Lista Encadeada Simples](/src/ListasEncadeadas/Simples)
 2. [Lista Duplamente Encadeada](/src/ListasEncadeadas/DuplamenteEncadeada)
