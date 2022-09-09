@@ -6,11 +6,13 @@ Antes de falar sobre dados e estrutura de dados, precisamos entender o que é um
 
 ## O que é uma `informação`?
 
-Podemos dizer grosseiramente que na computação o conceito de informação é um `conjunto de dados` que podem dar idéia sobre um fato, um evento ou uma coisa. Um dado sozinho é uma parte abstrata da informação, e logo não faz muito sentido sem o conjunto de dados restante (informação).
+Podemos dizer grosseiramente que na computação o conceito de informação é um `conjunto de dados` que podem dar idéia sobre um fato, um evento ou uma coisa.
 
 ## O que é um `dado`?
 
-Um dado é uma parte de uma informação manipulasa por um programa e que pode ser acessado através de um identificador, como um ponteiro ou uma variável.
+Um dado é uma parte menor e abstrata da informação, e logo não faz muito sentido sem o conjunto de dados restante (informação).
+
+Um dado é uma parte de uma informação manipulada por um programa e que pode ser acessado através de um identificador, como um ponteiro ou uma variável.
 
 Os tipos de dados mais comuns são:
 
