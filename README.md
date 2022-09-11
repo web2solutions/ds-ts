@@ -29,7 +29,7 @@ Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dad
 
     É o tipo usado para manipular números.
 
-    ```javascript
+    ```typescript
         const ano: number = 2022
     ```
 
@@ -37,7 +37,7 @@ Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dad
 
     É um objeto empacotador primitivo usado para lidar com dados BigInt, que são números `muito grande para serem manipulados` pelo tipo `number`.
 
-    ```javascript
+    ```typescript
         const numeroGrande1: BigInt = 9007199254740991n // conversão adicionando `n` no final do número
         const numeroGrande2: BigInt = BigInt(9007199254740991) // conversão usando o empacotador BigInt()
     ```
@@ -46,7 +46,7 @@ Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dad
 
     É o tipo usado para manipular dados do tipo texto ou sequência de caracteres.
 
-    ```javascript
+    ```typescript
         const nome: string = 'José Eduardo'
     ```
 
@@ -54,7 +54,7 @@ Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dad
 
     É tipo usado para manipular valores lógicos como `verdadeiro` e `falso`.
 
-    ```javascript
+    ```typescript
         const ceuAzul: boolean = true;
     ```
 
@@ -95,7 +95,7 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
     
     Um objeto do JavaScript é um `mapeamento entre chaves e valores`. Chaves podem ser do tipo `String` e `Symbol`. Os valores podem ser de qualquer tipo. Isso faz com que objetos sejam perfeitos para `hashmaps`.
 
-    ```javascript
+    ```typescript
         const objeto: Record<string|symbol, any> = {
             'chave 1': 'texto',
             'chave 2': 2,
@@ -151,7 +151,7 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
 
 O tipo `Date` é utilizado para manipular dados do tipo data. Objetos Date são baseados no valor de tempo que é o número de milisegundos desde 1º de Janeiro de 1970 (UTC)
 
-```javascript
+```typescript
     const hoje: Date = new Date()
     const data1: Date = new Date("December 17, 1995 03:24:00")
     const data2: Date = new Date("1995-12-17T03:24:00")
