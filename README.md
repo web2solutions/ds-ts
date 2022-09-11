@@ -151,13 +151,13 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
 
 O tipo `Date` é utilizado para manipular dados do tipo data. Objetos Date são baseados no valor de tempo que é o número de milisegundos desde 1º de Janeiro de 1970 (UTC)
 
-    ```javascript
-        const hoje: Date = new Date()
-        const data1: Date = new Date("December 17, 1995 03:24:00")
-        const data2: Date = new Date("1995-12-17T03:24:00")
-        const data3: Date = new Date(1995,11,17)
-        const data4: Date = new Date(1995,11,17,3,24,0)
-    ```
+```javascript
+    const hoje: Date = new Date()
+    const data1: Date = new Date("December 17, 1995 03:24:00")
+    const data2: Date = new Date("1995-12-17T03:24:00")
+    const data3: Date = new Date(1995,11,17)
+    const data4: Date = new Date(1995,11,17,3,24,0)
+```
 
 - `Coleções indexadas`
 
