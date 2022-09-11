@@ -98,12 +98,23 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
     ```javascript
         const objeto: Record<string|symbol, any> = {
             'chave 1': 'texto',
-            'chave 1': 2,
+            'chave 2': 2,
             'chave 3': 9007199254740991n,
             'chave 4': function () {
                 return 'minha função'
             }
         }
+
+        console.log(objeto)
+
+        /** 
+        {
+            'chave 1': 'texto',
+            'chave 2': 2,
+            'chave 3': 9007199254740991n,
+            'chave 4': [Function: chave 4]
+        }
+        */
     ```
     
     - `Arranjo associativo`
@@ -111,13 +122,21 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
     Em Javascript, `arrays` também são `objetos`. Isso quer dizer que você poderia reescrever o objeto acima com a seguinte notação:
 
     ```javascript 
-        const arranjoAssociativo = [];
+        const arranjoAssociativo = []
         arranjoAssociativo['chave 1'] = 'texto'
         arranjoAssociativo['chave 2'] = 2
         arranjoAssociativo['chave 3'] = 9007199254740991n
         arranjoAssociativo['chave 4'] = function () {
             return 'minha função'
         }
+
+        console.log(arranjoAssociativo)
+        /** [
+            'chave 1': 'texto',
+            'chave 2': 2,
+            'chave 3': 9007199254740991n,
+            'chave 4': [Function (anonymous)]
+        ] */
     ```
 
     Observe que o código acima é somente válido como Javascript. Caso tente transpilar esse código com Typescript, você terá um erro como o exemplo á seguir:
@@ -130,8 +149,50 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
 
 - `Datas`
 
+O tipo `Date` é utilizado para manipular dados do tipo data. Objetos Date são baseados no valor de tempo que é o número de milisegundos desde 1º de Janeiro de 1970 (UTC)
+
+    ```javascript
+        const hoje: Date = new Date()
+        const data1: Date = new Date("December 17, 1995 03:24:00")
+        const data2: Date = new Date("1995-12-17T03:24:00")
+        const data3: Date = new Date(1995,11,17)
+        const data4: Date = new Date(1995,11,17,3,24,0)
+    ```
+
 - `Coleções indexadas`
+
+    Coleções indexadas são coleções de dados que são ordenados por um valor indexado.
+
     - `Array`
+
+        Arranjos, array ou vetor é são conjuntos de dados que podem ser referenciados por um nome e um índice numérico.
+
+        Em Javascript, os dados de um arranjo podem ser de qualquer tipo.
+
+        Em Typescript, definimos os possíveis tipos de dados aceito pelo arranjo em questão.
+
+        Por padrão os arranjos `não têm uma dimensão definida`.
+
+        `Javascript`
+
+        ```javascript
+            const arranjo1 = ['elemento 1', 'elemento 2', { propriedade: 1}]
+            const arranjo2 = new Array('elemento 1', 'elemento 2', { propriedade: 1})
+        ```
+
+        `Typescript`
+
+        ```javascript
+            const arranjo1: Array<string> = ['elemento 1', 'elemento 2']
+            const arranjo2: string[] = new Array('elemento 1', 'elemento 2')
+        ```
+
+        `Arranjo com dimensão definida`
+
+        ```javascript
+            const vetorLimitado: string[] = new Array(10) // vetor de string com 10 elementos
+        ```
+
     - `Array tipado`
 
 
