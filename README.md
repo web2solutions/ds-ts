@@ -182,14 +182,14 @@ O tipo `Date` é utilizado para manipular dados do tipo data. Objetos Date são 
 
         `Typescript`
 
-        ```javascript
+        ```typescript
             const arranjo1: Array<string> = ['elemento 1', 'elemento 2']
             const arranjo2: string[] = new Array('elemento 1', 'elemento 2')
         ```
 
         `Arranjo com dimensão definida`
 
-        ```javascript
+        ```typescript
             const vetorLimitado: string[] = new Array(10) // vetor de string com 10 elementos
         ```
 
