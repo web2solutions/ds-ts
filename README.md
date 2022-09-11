@@ -149,7 +149,7 @@ Os tipos de `dados primitivos` podem armazenar `somente um dado` por vez. Para o
 
 - `Datas`
 
-O tipo `Date` é utilizado para manipular dados do tipo data. Objetos Date são baseados no valor de tempo que é o número de milisegundos desde 1º de Janeiro de 1970 (UTC)
+O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado do tipo `data` utilizamos o objeto `Date` do Javascript. Objetos Date são baseados no valor de tempo que é o número de milisegundos desde 1º de Janeiro de 1970 (UTC).
 
 ```typescript
     const hoje: Date = new Date()
@@ -166,6 +166,8 @@ O tipo `Date` é utilizado para manipular dados do tipo data. Objetos Date são 
     - `Array`
 
         Arranjos, array ou vetor é são conjuntos de dados que podem ser referenciados por um nome e um índice numérico.
+
+        Para se criar um vetor utilizamos o objeto `Array` do Javascript.
 
         Em Javascript, os dados de um arranjo podem ser de qualquer tipo.
 
