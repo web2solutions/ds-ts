@@ -200,6 +200,14 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
 
     - `Array tipado`
 
+    São objetos do tipo `array` com mecanismos para acessar dados binários crus. 
+    
+    É necessário para o acesso fácil e performático de dados binários
+
+    `Como funciona um arranjo tipado?`
+
+    A implementação de arranjos tipados é dividida entre `buffer` e `view`. Um buffer (implementado pelo objeto `ArrayBuffer`) é um objeto que representa um monte de dados; não possui nenhum formato específico e não oferece nenhum mecanismo para acessar seu conteúdo. Para acessar a memória contida em um buffer, você precisa usar uma view. Uma view provê um contexto — ou seja, um tipo de dado, um offset inicial e número de elementos — que transforma o dado em um array tipado real.
+
 
 - `Coleções chaveadas`
     - `Map`
