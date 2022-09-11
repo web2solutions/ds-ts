@@ -210,6 +210,10 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
 
 
 - `Coleções chaveadas`
+
+    Coleções chaveadas são coleções de dados que são ordenados por uma chave. Elas contêm elementos que são iteráveis em ordem de inserção.
+
+
     - `Map`
     
         Mapeamento entre chave e objeto
