@@ -1,6 +1,9 @@
 # Estrutura de dados usando Typescript
 
-O propósito desse repositório é demonstrar e compartilhar com desenvolvedores da língua portuguesa a implementação das diversas estuturas de dados usando a linguagem Typescript.
+O propósito desse repositório é demonstrar e compartilhar, com desenvolvedores Typescript e Javascript de língua portuguesa, a implementação das diversas estuturas de dados usando a linguagem Typescript. 
+
+Se você quer aprender Typescript, provavelmente está procurando pela [documentação oficial da linguagem](https://www.typescriptlang.org/).
+
 
 Antes de falar sobre dados e estrutura de dados, precisamos entender o que é uma informação:
 
