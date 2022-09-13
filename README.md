@@ -208,6 +208,10 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
 
     A implementação de arranjos tipados é dividida entre `buffer` e `view`. Um buffer (implementado pelo objeto `ArrayBuffer`) é um objeto que representa um monte de dados; não possui nenhum formato específico e não oferece nenhum mecanismo para acessar seu conteúdo. Para acessar a memória contida em um buffer, você precisa usar uma view. Uma view provê um contexto — ou seja, um tipo de dado, um offset inicial e número de elementos — que transforma o dado em um array tipado real.
 
+    `ArrayBuffer`
+
+    O `ArrayBuffer` é um tipo de dado usado para representar um `buffer de dados binários de tamanho fixo genérico`. Você `não pode manipular diretamente o conteúdo de um ArrayBuffer`; ao invés disso, você deve criar uma view de array tipado ou uma `DataView` (visuzalizador de dados) que represente o buffer em um formato específico, e use esta view para ler e modificar o conteúdo do buffer.
+
 
 - `Coleções chaveadas`
 
@@ -251,6 +255,8 @@ Além disso, uma estrutura de dados é um objeto que armazena dados de forma efi
 
 
 ### Referências:
+
+- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures
 
 - https://www.dimap.ufrn.br/~umberto/paed/lista04.pdf
 
