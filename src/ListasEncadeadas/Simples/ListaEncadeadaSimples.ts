@@ -20,7 +20,7 @@ export class ListaEncadeadaSimples {
         return this.tamanho ? this._nos[0] : null;
     }
 
-    public get ultimo(): No | null {
+    public get rabo(): No | null {
         return this.tamanho ? this._nos[this._nos.length - 1] : null
     }
 
