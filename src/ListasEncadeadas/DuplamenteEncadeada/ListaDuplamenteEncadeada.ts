@@ -20,7 +20,7 @@ export class ListaDuplamenteEncadeada {
         return this.tamanho ? this._nos[0] : null;
     }
 
-    public get ultimo(): No | null {
+    public get rabo(): No | null {
         return this.tamanho ? this._nos[this._nos.length - 1] : null
     }
 
@@ -28,10 +28,14 @@ export class ListaDuplamenteEncadeada {
     public inserirEm (posicao: number, valor: string | number): No {
         const anterior: No = this._nos[posicao - 1] || null
         const proximo: No = this._nos[posicao] || null
-        const node: No = { valor, proximo }
+        const node: No = { valor, anterior, proximo }
 
         if (anterior) {
             anterior.proximo = node
+        }
+
+        if (proximo) {
+            proximo.anterior = node
         }
         
         this._nos.splice(posicao, 0, node)
@@ -54,6 +58,10 @@ export class ListaDuplamenteEncadeada {
         if (anterior) {
             anterior.proximo = proximo;
         }
+
+        if (proximo) {
+            proximo.anterior = anterior;
+        }
         const no: No = this._nos.splice(posicao, 1)[0] || null
         return no
     }
@@ -63,6 +71,15 @@ export class ListaDuplamenteEncadeada {
         return this._nos[posicao]
     }
 
+    public contem(valor: number | string): boolean {
+        for(let posicao = 0; posicao < this.tamanho; posicao++) {
+            if(this._nos[posicao].valor === valor) {
+                return true
+            }
+        }
+        return false
+    }
+
     public busca(valor: number | string): No | null {
         for(let posicao = 0; posicao < this.tamanho; posicao++) {
             if(this._nos[posicao].valor === valor) {
@@ -70,6 +87,15 @@ export class ListaDuplamenteEncadeada {
             }
         }
         return null
+    }
+
+    public buscaPosicao(valor: number | string): number {
+        for(let posicao = 0; posicao < this.tamanho; posicao++) {
+            if(this._nos[posicao].valor === valor) {
+                return posicao
+            }
+        }
+        return -1
     }
 
     // limpar lista linkada
