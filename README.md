@@ -220,17 +220,19 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
 
     - `Map`
     
-        Mapeamento entre chave e objeto
+        Permite a criação de pares de mapeamento entre chave e valor. A ordem final das chaves é a mesma que a ordem de inserção original. Dados primitivos e não primitivos podem ser usados como chave ou valor.
+
+        A especificação requer que um Map seja implementado de forma que, em média, ofereça tempo de acesso que seja sublinear ao número de elementos na coleção. Porém, ele pode ser reprenstado internamente como uma tabela hash com (with O(1) lookup), a search tree (with O(log(N)) lookup) ou qualquer outra estutura de dados, contanto que sua complexidade seja melhor que O(N)
 
     ```javascript
-        const clientes = new Map()
+        const clientes:Map<any, any> = new Map()
         clientes.set('José Eduardo', { telefone: '+55 27 99737-5850', email: 'web2solucoes@gmail.com' })
         clientes.set('Amanda Souza', { telefone: '+55 27 99455-6436', email: 'amanda@icloud.com' })
         console.log(clientes.size) // 2
         console.log(clientes.get('José Eduardo')) // { telefone: '+55 27 99737-5850', email: 'web2solucoes@gmail.com' }
         console.log(clientes.has('José Eduardo')) // true
 
-        const iterador = clientes.entries()
+        let iterador = clientes.entries()
         console.log(iterador.next().value)
         /**
         * [
@@ -246,6 +248,17 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
         ]
         */
 
+        iterador = clientes.values()
+        console.log(iterador.next().value)
+        /**
+        * { telefone: '+55 27 99737-5850', email: 'web2solucoes@gmail.com' }
+        */
+        console.log(iterador.next().value)
+        /**
+        * { telefone: '+55 27 99455-6436', email: 'amanda@icloud.com' }
+        */
+
+
         clientes.forEach((value, key, map) => console.log(key, value))
         // José Eduardo { telefone: '+55 27 99737-5850', email: 'web2solucoes@gmail.com' }
         // Amanda Souza { telefone: '+55 27 99455-6436', email: 'amanda@icloud.com' }
@@ -257,7 +270,9 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
 
     - `Set`
 
-        Representa um conjunto de objetos
+        Representa um conjunto de dados únicos. Os dados podem ser primitivos ou uma referência á um objeto. Um dado em um Set deve ocorrer somente uma vez.
+
+        A especificação requer que um Set seja implementado de forma que, em média, ofereça tempo de acesso que seja sublinear ao número de elementos na coleção. Porém, ele pode ser reprenstado internamente como uma tabela hash com (with O(1) lookup), a search tree (with O(log(N)) lookup) ou qualquer outra estutura de dados, contanto que sua complexidade seja melhor que O(N)
 
     - `WeakMap`
 
