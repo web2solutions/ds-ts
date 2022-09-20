@@ -4,6 +4,16 @@ import { No } from "./No";
 export class ListaEncadeadaSimples {
     private _nos: No[] = []
 
+    constructor (nodes?: No) {
+        if(typeof nodes !== 'undefined') this.popular(nodes)
+    }
+    
+    popular (nodes: No) {
+      this.inserirEmUltimo(nodes.valor)
+        if (nodes.proximo === null) return
+        this.popular(nodes.proximo)
+    }
+
     public get tamanho(): number {
         return this._nos.length
     }
