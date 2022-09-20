@@ -222,6 +222,39 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
     
         Mapeamento entre chave e objeto
 
+    ```javascript
+        const clientes = new Map()
+        clientes.set('José Eduardo', { telefone: '+55 27 99737-5850', email: 'web2solucoes@gmail.com' })
+        clientes.set('Amanda Souza', { telefone: '+55 27 99455-6436', email: 'amanda@icloud.com' })
+        console.log(clientes.size) // 2
+        console.log(clientes.get('José Eduardo')) // { telefone: '+55 27 99737-5850', email: 'web2solucoes@gmail.com' }
+        console.log(clientes.has('José Eduardo')) // true
+
+        const iterador = clientes.entries()
+        console.log(iterador.next().value)
+        /**
+        * [
+        'José Eduardo',
+        { telefone: '+55 27 99737-5850', email: 'web2solucoes@gmail.com' }
+        ]
+        */
+        console.log(iterador.next().value)
+        /**
+        * [
+        'Amanda Souza',
+        { telefone: '+55 27 99455-6436', email: 'amanda@icloud.com' }
+        ]
+        */
+
+        clientes.forEach((value, key, map) => console.log(key, value))
+        // José Eduardo { telefone: '+55 27 99737-5850', email: 'web2solucoes@gmail.com' }
+        // Amanda Souza { telefone: '+55 27 99455-6436', email: 'amanda@icloud.com' }
+
+        clientes.delete('José Eduardo')
+
+        clientes.clear() // vazio
+    ```
+
     - `Set`
 
         Representa um conjunto de objetos
