@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Data structures with Typescript",
   "main": "index.js",
-  "engines" : { 
-    "npm" : ">=8.19.2",
-    "node" : ">=18.9.0"
-  },
   "scripts": {
     "test": "npx jest ./src",
     "lint": "eslint . --ext .ts"
