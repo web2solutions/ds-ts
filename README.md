@@ -276,13 +276,87 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
 
     Em Javascrit, um mapa é similar á um objeto. Ambos permitem associar dados  á uma chave. Antes do construtor `Map` ser implementado na linguagem, `objetos` eram utilizados como `mapas`.
 
-    Dentre as duas implementações, o construtor `Map` deve ser priorizado por diversas razões: efieciência, segurança e uma melhor API.
+    Dentre as duas implementações, o construtor `Map` deve ser priorizado por diversas razões: eficiência, segurança e uma melhor API.
 
     - `Set` - `Grupo`
 
         Representa um conjunto de dados únicos. Os dados podem ser primitivos ou uma referência á um objeto. Um dado em um Set deve ocorrer somente uma vez.
 
         A especificação requer que um Set seja implementado de forma que, em média, ofereça tempo de acesso que seja sublinear ao número de elementos na coleção. Porém, ele pode ser reprenstado internamente como uma tabela hash com (with O(1) lookup), a search tree (with O(log(N)) lookup) ou qualquer outra estutura de dados, contanto que sua complexidade seja melhor que O(N)
+
+        ```javascript
+            const grupoHibrido = new Set()
+            grupoHibrido.add(1)           // Set [ 1 ]
+            grupoHibrido.add(5)           // Set [ 1, 5 ]
+            grupoHibrido.add(5)           // Set [ 1, 5 ]
+            grupoHibrido.add('texto') // Set [ 1, 5, 'texto' ]
+            const objeto = {a: 1, b: 2}
+            grupoHibrido.add(objeto)
+
+            grupoHibrido.add({a: 1, b: 2})   // a variável objeto está referenciando outro objeto, logo adicionar esse valor ao grupo, é válido
+
+            for (const elemento of grupoHibrido) {
+                    console.log(elemento);
+            }
+            /**
+            *
+                    1
+                    5
+                    texto
+                    { a: 1, b: 2 }
+                    { a: 1, b: 2 }
+            */
+
+            for (const chave of grupoHibrido.keys()) {
+                    console.log(chave);
+            }
+            /**
+            *
+                    1
+                    5
+                    texto
+                    { a: 1, b: 2 }
+                    { a: 1, b: 2 }
+            */
+
+            for (const valor of grupoHibrido.values()) {
+                    console.log(valor);
+            }
+            /**
+            *
+                    1
+                    5
+                    texto
+                    { a: 1, b: 2 }
+                    { a: 1, b: 2 }
+            */
+
+            for (const [chave, valor] of grupoHibrido.entries()) {
+            console.log(chave, valor);
+            }
+            /**
+            *
+                    1 1 
+                    5 5
+                    texto texto
+                    { a: 1, b: 2 } { a: 1, b: 2 }
+                    { a: 1, b: 2 } { a: 1, b: 2 }
+            */
+        ```
+
+        `Conversão entre Grupos e Arranjos`
+
+        ```typescript
+            const grupoHibrido = new Set()
+            grupoHibrido.add(1)           // Set [ 1 ]
+            grupoHibrido.add(5)           // Set [ 1, 5 ]
+            grupoHibrido.add(5)           // Set [ 1, 5 ]
+            grupoHibrido.add('texto') // Set [ 1, 5, 'texto' ]
+
+            const arranjo: Array<string | number> = Array.from(grupoHibrido) // [1, 5, 'texto']
+
+            const arranjo2 : Array<string | number> = [...grupoHibrido] // [1, 5, 'texto']
+        ```
 
     - `WeakMap`
 
