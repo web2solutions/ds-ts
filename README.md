@@ -218,9 +218,13 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
     Coleções chaveadas são coleções de dados que são ordenados por uma chave. Elas contêm elementos que são iteráveis em ordem de inserção.
 
 
-    - `Map`
+    - `Map` - `Mapa` 
     
         Permite a criação de pares de mapeamento entre chave e valor. A ordem final das chaves é a mesma que a ordem de inserção original. Dados primitivos e não primitivos podem ser usados como chave ou valor.
+
+        Uma chave pode ocorrer somente uma vez em um mapa, ela é única em uma coleção.
+
+        A iteração se dá  por ordem de inserção e retorna um par de `[chave, valor]` para cada iteração.
 
         A especificação requer que um Map seja implementado de forma que, em média, ofereça tempo de acesso que seja sublinear ao número de elementos na coleção. Porém, ele pode ser reprenstado internamente como uma tabela hash com (with O(1) lookup), a search tree (with O(log(N)) lookup) ou qualquer outra estutura de dados, contanto que sua complexidade seja melhor que O(N)
 
@@ -268,7 +272,13 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
         clientes.clear() // vazio
     ```
 
-    - `Set`
+    `Mapas X Objeto`
+
+    Em Javascrit, um mapa é similar á um objeto. Ambos permitem associar dados  á uma chave. Antes do construtor `Map` ser implementado na linguagem, `objetos` eram utilizados como `mapas`.
+
+    Dentre as duas implementações, o construtor `Map` deve ser priorizado por diversas razões: efieciência, segurança e uma melhor API.
+
+    - `Set` - `Grupo`
 
         Representa um conjunto de dados únicos. Os dados podem ser primitivos ou uma referência á um objeto. Um dado em um Set deve ocorrer somente uma vez.
 
