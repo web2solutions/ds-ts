@@ -220,7 +220,7 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
 
     - `Map` - `Mapa` 
     
-        Permite a criação de pares de mapeamento entre chave e valor. A ordem final das chaves é a mesma que a ordem de inserção original. Dados primitivos e não primitivos podem ser usados como chave ou valor.
+        Um mapa permite a criação de pares de mapeamento entre chave e valor. A ordem final das chaves é a mesma que a ordem de inserção original. Dados primitivos e não primitivos podem ser usados como chave ou valor. Em Javascript, para criar um mapa, utilizamos o construtor `Map`.
 
         Uma chave pode ocorrer somente uma vez em um mapa, ela é única em uma coleção.
 
@@ -280,7 +280,7 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
 
     - `Set` - `Grupo`
 
-        Representa um conjunto de dados únicos. Os dados podem ser primitivos ou uma referência á um objeto. Um dado em um Set deve ocorrer somente uma vez.
+        Um grupo representa um conjunto de dados únicos. Os dados podem ser primitivos ou uma referência á um objeto. Um dado em um grupo deve ocorrer somente uma vez. Em Javascript, para criar um grupo, utilizamos o construtor `Set`.
 
         A especificação requer que um Set seja implementado de forma que, em média, ofereça tempo de acesso que seja sublinear ao número de elementos na coleção. Porém, ele pode ser reprenstado internamente como uma tabela hash com (with O(1) lookup), a search tree (with O(log(N)) lookup) ou qualquer outra estutura de dados, contanto que sua complexidade seja melhor que O(N)
 
