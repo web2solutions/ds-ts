@@ -347,16 +347,39 @@ O tipo `Data` é utilizado para manipular dados do tipo data. Para criar um dado
         `Conversão entre Grupos e Arranjos`
 
         ```typescript
-            const grupoHibrido = new Set()
-            grupoHibrido.add(1)           // Set [ 1 ]
-            grupoHibrido.add(5)           // Set [ 1, 5 ]
-            grupoHibrido.add(5)           // Set [ 1, 5 ]
-            grupoHibrido.add('texto') // Set [ 1, 5, 'texto' ]
+            const grupo: Set<string | number>= new Set()
+            grupo.add(1)   // Set [ 1 ]
+            grupo.add(5)   // Set [ 1, 5 ]
+            grupo.add(5)   // Set [ 1, 5 ]
+            grupo.add('texto') // Set [ 1, 5, 'texto' ]
 
-            const arranjo: Array<string | number> = Array.from(grupoHibrido) // [1, 5, 'texto']
+            const arranjo: Array<string | number> = Array.from(grupo) 
 
-            const arranjo2 : Array<string | number> = [...grupoHibrido] // [1, 5, 'texto']
+            const arranjo2: Array<string | number> = [...grupo] // [1, 5, 'texto']
+
+            console.log(arranjo) // [1, 5, 'texto']
+            console.log(arranjo2) // [1, 5, 'texto']
         ```
+
+        `Operações com grupos`
+
+        `Interseção`
+
+        ```typescript
+            function eIntersecao (grupo: Set<number>, subGrupo: Set<number>) {
+                for (const numero of subGrupo) { 
+                    if (!grupo.has(numero)) { 
+                    return false
+                    }
+                } 
+                return true
+            }
+
+            const grupo1: Set<number> = new Set([1, 2, 3, 4, 5, 6])
+            const grupo2: Set<number> = new Set([3, 4, 5])
+
+            console.log(eIntersecao(grupo1, grupo2)) // true
+        ``
 
     - `WeakMap`
 
@@ -381,9 +404,17 @@ Além disso, uma estrutura de dados é um objeto que armazena dados de forma efi
 - `Homogênias` ou `heterogêneas`
 - `Estáticas` ou `dinâmicas`
 
-1. [Pilhas](/src/Pilhas)
-2. [Filas](/src/Filas)
-3. [Listas Encadeadas](/src/ListasEncadeadas)
+1. [Pilhas - Stacks](/src/Pilhas)
+2. [Filas - Queues](/src/Filas)
+3. [Listas Encadeadas - Linked Lists](/src/ListasEncadeadas)
+    - Duplamente ligadas
+5. [Montes - Heaps](/src/ListasEncadeadas)
+    - MaxHeap
+    - MinHeap
+6. [Árvores - Tree](/src/ListasEncadeadas)
+7. [Árvores Binárias - Binary Trees](/src/ListasEncadeadas)
+8. [Árvores de Busca Binárias - Binary Search Trees](/src/ListasEncadeadas)
+9. [Graphs](/src/ListasEncadeadas)
 
 
 ### Referências:
