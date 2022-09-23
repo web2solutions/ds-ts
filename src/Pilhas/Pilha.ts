@@ -1,18 +1,18 @@
-export class Pilha {
-    private _itens: Array<string|number> = [];
+export class Pilha <T> {
+    private _itens: Array<T> = [];
 
-    constructor (valoresIniciais: Array<string|number>) {
+    constructor (valoresIniciais: Array<T>) {
         if (valoresIniciais) {
             this._itens = [...valoresIniciais]
         }
     }
 
-    public empilhar (valor:string|number): Array<string|number> {
+    public empilhar (valor:T): Array<T> {
         this._itens.unshift(valor)
         return this._itens
     }
 
-    public desempilhar (): string|number|undefined {
+    public desempilhar (): T|undefined {
         return this._itens.shift()
     }
 
@@ -20,7 +20,67 @@ export class Pilha {
         return !!(this._itens.length === 0)
     }
 
-    public topo () {
+    public get topo () {
         return this._itens[0]
     }
+
+    public get tamanho() { 
+        return this._itens.length
+    }
 }
+
+
+const pilha: Pilha<string> = new Pilha('([])'.split('') as Array<string>)
+
+console.log(pilha)
+
+
+function taBalanceado(caracteres: any) : boolean {
+    const _pilha: Pilha<string> = new Pilha([])
+    for (const bracket of caracteres) {
+      if (bracket === '[') {
+        _pilha.empilhar(bracket);
+      } else if (bracket === '{') {
+        _pilha.empilhar(bracket);
+      } else if (bracket === '<') {
+        _pilha.empilhar(bracket);
+      } else if (bracket === '(') {
+        _pilha.empilhar(bracket);
+      } else if (bracket === ']') {
+        if (_pilha.topo === '[') {
+          _pilha.desempilhar();
+        } else {
+          _pilha.empilhar(bracket);
+        }
+      } else if (bracket === '}') {
+        if (_pilha.topo === '{') {
+          _pilha.desempilhar();
+        } else {
+          _pilha.empilhar(bracket);
+        }
+      } else if (bracket === '>') {
+        if (_pilha.topo === '<') {
+          _pilha.desempilhar();
+        } else {
+          _pilha.empilhar(bracket);
+        }
+      } else if (bracket === ')') {
+        if (_pilha.topo === '(') {
+          _pilha.desempilhar();
+        } else {
+          _pilha.empilhar(bracket);
+        }
+      } else {
+        continue;
+      }
+    }
+  
+    return _pilha.tamanho === 0;
+  }
+  
+  console.log('([]) ta balanceado', taBalanceado('([])'));
+  console.log('([>]) ta balanceado', taBalanceado('([>])'));
+  console.log('([]>) ta balanceado', taBalanceado('([]>)'));
+  console.log('([][]) ta balanceado', taBalanceado('([][])'));
+  console.log('([][]<>)() ta balanceado', taBalanceado('([][]<>)()'));
+  console.log('([][]<>)(abc) ta balanceado', taBalanceado('([][]<>)(abc)'));
