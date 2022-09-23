@@ -36,46 +36,46 @@ console.log(pilha)
 
 
 function taBalanceado(caracteres: any) : boolean {
-    const _pilha: Pilha<string> = new Pilha([])
+    const pilha: Pilha<string> = new Pilha([])
     for (const bracket of caracteres) {
       if (bracket === '[') {
-        _pilha.empilhar(bracket);
+        pilha.empilhar(bracket);
       } else if (bracket === '{') {
-        _pilha.empilhar(bracket);
+        pilha.empilhar(bracket);
       } else if (bracket === '<') {
-        _pilha.empilhar(bracket);
+        pilha.empilhar(bracket);
       } else if (bracket === '(') {
-        _pilha.empilhar(bracket);
+        pilha.empilhar(bracket);
       } else if (bracket === ']') {
-        if (_pilha.topo === '[') {
-          _pilha.desempilhar();
+        if (pilha.topo === '[') {
+          pilha.desempilhar();
         } else {
-          _pilha.empilhar(bracket);
+          pilha.empilhar(bracket);
         }
       } else if (bracket === '}') {
-        if (_pilha.topo === '{') {
-          _pilha.desempilhar();
+        if (pilha.topo === '{') {
+          pilha.desempilhar();
         } else {
-          _pilha.empilhar(bracket);
+          pilha.empilhar(bracket);
         }
       } else if (bracket === '>') {
-        if (_pilha.topo === '<') {
-          _pilha.desempilhar();
+        if (pilha.topo === '<') {
+          pilha.desempilhar();
         } else {
-          _pilha.empilhar(bracket);
+          pilha.empilhar(bracket);
         }
       } else if (bracket === ')') {
-        if (_pilha.topo === '(') {
-          _pilha.desempilhar();
+        if (pilha.topo === '(') {
+          pilha.desempilhar();
         } else {
-          _pilha.empilhar(bracket);
+          pilha.empilhar(bracket);
         }
       } else {
         continue;
       }
     }
   
-    return _pilha.tamanho === 0;
+    return pilha.tamanho === 0;
   }
   
   console.log('([]) ta balanceado', taBalanceado('([])'));
