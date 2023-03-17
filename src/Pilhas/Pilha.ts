@@ -3,7 +3,7 @@ export class Pilha <T> {
 
     constructor (valoresIniciais: Array<T>) {
         if (valoresIniciais) {
-            this._itens = [...valoresIniciais]
+          this._itens = valoresIniciais;
         }
     }
 
@@ -35,8 +35,10 @@ const pilha: Pilha<string> = new Pilha('([])'.split('') as Array<string>)
 console.log(pilha)
 
 
-function taBalanceado(caracteres: any) : boolean {
-    const pilha: Pilha<string> = new Pilha([])
+function taBalanceado(caracteres: string | string[]): boolean {
+    // criar pilha vazia
+  const pilha: Pilha<string> = new Pilha([]);
+    
     for (const bracket of caracteres) {
       if (bracket === '[') {
         pilha.empilhar(bracket);
@@ -78,7 +80,7 @@ function taBalanceado(caracteres: any) : boolean {
     return pilha.tamanho === 0;
   }
   
-  console.log('([]) ta balanceado', taBalanceado('([])'));
+  console.log('([]) ta balanceado', taBalanceado('([])'.split('')));
   console.log('([>]) ta balanceado', taBalanceado('([>])'));
   console.log('([]>) ta balanceado', taBalanceado('([]>)'));
   console.log('([][]) ta balanceado', taBalanceado('([][])'));

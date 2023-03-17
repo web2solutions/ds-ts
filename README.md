@@ -424,3 +424,116 @@ Além disso, uma estrutura de dados é um objeto que armazena dados de forma efi
 - https://www.dimap.ufrn.br/~umberto/paed/lista04.pdf
 
 - http://sites.poli.usp.br/p/fabio.cozman/Didatico/Comp/Material/estruturas.pdf
+
+
+
+
+1) Data Structures - Practice data structures like Heaps, HashTable, Tree, LinkedList, Stack, Queue, and Graph. 
+2) Algorithm - Practice recursion, Merge-Sort, Quick-Sort, Breadth-first search, Depth-first search, Divide and Conquer, and Dynamic Programming
+3) Explain your thought process - Extremely important. Practice describing your solution and design decisions clearly and concisely.
+4) Collaborate – Don't forget to discuss, present multiple solutions, and take hints from the interviewer.
+
+
+
+
+1. Sliding Window
+https://medium.com/codex/sliding-window-problems-27d599c6cc13
+
+2. Islands (Matrix Traversal)
+3. Two Pointers
+4. Fast & Slow Pointers
+5. Merge Intervals
+6. Cyclic Sort
+7. In-place Reversal of a LinkedList
+8. Tree Breadth-First Search
+9. Tree Depth First Search
+10. Two Heaps
+11. Subsets
+12. Modified Binary Search
+13. Bitwise XOR
+14. Top ‘K’ Elements
+15. K-way Merge
+16. 0/1 Knapsack
+17. Unbounded Knapsack
+18. Fibonacci Numbers
+19. Palindromic Subsequence
+20. Longest Common Substring
+21. Topological Sort
+22. Backtracking
+23. Multi-threaded
+
+
+
+
+
+
+
+
+
+
+
+cold start
+
+A Lambda cold start occurs when a new function instance must be created and initialized. The cold start refers to the delay between invocation and runtime created by the initialization process. Lambda cold starts occur when there is no available function instance to respond to an invocation.
+
+Avoid cold start
+
+1. Avoid HTTP/HTTPS Calls Inside Lambda. HTTPS calls prompt cold starts in serverless applications and increases a function's invoking time. ...
+2. Preload All Dependencies. ...
+3. Avoid Colossal Functions. ...
+4. Reducing Setup Variables.
+
+duration: The duration of a cold start varies from under 100 ms to over 1 second. 
+
+How long does Lambda take to warm up?: 5 seconds
+
+Warm Start X cold start
+
+Improvements:
+1. Use javascript, pythin, not java or c#
+2. avoid function chains
+3. avoid VPC - Ip networkd card
+4. keep function Warm - ping pooling
+5. more cpu and memory
+6. Small and single purpose functions 
+
+test serverless 
+
+
+- Black Box Testing is a software testing method in which the internal structure/design/implementation of the item being tested is not known to the tester. Only the external design and structure are tested. Unit and Integration
+ 
+- White Box Testing is a software testing method in which the internal structure/design/implementation of the item being tested is known to the tester. Implementation and impact of the code are tested.  MOCKS
+
+
+
+
+
+
+giulyagam123
+
+
+miladivastore
+
+ayllapancini
+
+
+https://www.instagram.com/larlabeauty/
+
+https://www.instagram.com/aamandacarolina_/
+
+
+
+4003 0520
+
+
+lista
+
+massive drake X Smooth operator
+
+
+
+- Respirar
+- Carta para eu no futuro.
+- Praticas pequenas melhorias por vez. Lentamente.
+- Caderno de agradecimentos diários. 
+- Meditação.

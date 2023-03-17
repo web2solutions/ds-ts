@@ -45,6 +45,7 @@ function isBalanced(input) {
   return stack.length === 0;
 }
 
+console.log('(([])) is balanced', isBalanced('(([]))'));
 console.log('([]) is balanced', isBalanced('([])'));
 console.log('([>]) is balanced', isBalanced('([>])'));
 console.log('([]>) is balanced', isBalanced('([]>)'));
