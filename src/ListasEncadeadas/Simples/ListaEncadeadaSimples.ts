@@ -9,7 +9,7 @@ export class ListaEncadeadaSimples {
     }
     
     popular (nodes: No) {
-      this.inserirEmUltimo(nodes.valor)
+        this.inserirEmUltimo(nodes.valor)
         if (nodes.proximo === null) return
         this.popular(nodes.proximo)
     }
