@@ -2,7 +2,7 @@
 
 Árvore são estruturas de dados não lineares.
 
-Herda as características da [topologia em árvore.](TopologiaArvore.md)
+Herda as características da [topologia em árvore.](TopologiaArvore.html)
 
 Diferentemente das listas, em que os dados se encontram numa sequência, nas árvores os dados estão dispostos de forma hierárquica, seus elementos se encontram "acima" ou "abaixo" de outros elementos da árvore.
 
@@ -22,4 +22,4 @@ O relacionamento entre nodos é descrito com os termos "pai" (ou "mãe") para os
 
 ## Tipos de Árvores
 
-- [Arvores de Prefixos](Arvore%20de%20Prefixos/README.md)
+- [Arvores de Prefixos](ArvoredePrefixos.html)

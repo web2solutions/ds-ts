@@ -65,3 +65,5 @@ Além disso, uma estrutura de dados é um objeto que armazena dados de forma efi
 - https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/tries.html
 
 - https://people.cs.pitt.edu/~aus/cs1501/search-b-tree.pdf
+
+- https://pt.wikipedia.org/wiki/Topologia_em_%C3%A1rvore
