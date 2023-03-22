@@ -11,7 +11,5 @@ Versões mais elaboradas de listas encadeadas utilizam nós com ponteiros para o
 A vantagem é a flexibilidade na inserção e remoção de elementos. A desvantagem é que não temos acesso direto aos elementos.
 Não existe algo equivalente ao índice para se acessar diretamente o elemento.
 
-
-
-1. [Lista Encadeada Simples](/src/ListasEncadeadas/Simples)
-2. [Lista Duplamente Encadeada](/src/ListasEncadeadas/DuplamenteEncadeada)
+1. [Lista Encadeada Simples](ListaLigada.md)
+2. [Lista Duplamente Encadeada](ListaDuplamenteLigada.md)
