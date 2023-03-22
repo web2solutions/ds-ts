@@ -45,6 +45,7 @@ A string `v` está representada na árvore mas não é uma chave. `vendas`,  `ve
 
 A string `vend` está representada na árvore mas não é uma chave. `vendas` e `vender` são chaves que compartilham o mesmo prefixo.
 
+## Exemplo de implementação
 
 ```typescript
 // Nó
