@@ -41,6 +41,6 @@ Dito isto, palavras que compartilham o mesmo prefixo, compartilham o mesmo ramo 
 
 ![árvore](arvore.png "Árvore")
 
-A string `v` está representada na árvore mas não é uma chave. `vendas`,  `vender` e `você` são chaves.
+A string `v` está representada na árvore mas não é uma chave. `vendas`,  `vender` e `você` são chaves que compartilham o mesmo prefixo.
 
-A string `vend` está representada na árvore mas não é uma chave. `vendas` e `vender` são chaves.
+A string `vend` está representada na árvore mas não é uma chave. `vendas` e `vender` são chaves que compartilham o mesmo prefixo.
