@@ -1,7 +1,49 @@
 // https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/tries.html
 // https://people.cs.pitt.edu/~aus/cs1501/search-b-tree.pdf
 
+class No { 
+  public chave: string | null;
+  public pai: No | null;
+  public filhos: Record<string, No>;
+  public ultimo: boolean;
 
+  constructor(chave: string | null) {
+    this.chave = chave;
+    this.pai = null;
+    this.filhos = {};
+    this.ultimo = false;
+  }
+  
+  public pegarPalavra() {
+    let palavra = [];
+    let no: No | null = this;
+
+    while (no !== null) {
+      palavra.unshift(no.chave);
+      no = no.pai ? no.pai : null;
+    }
+
+    return palavra.join('');
+  };
+};
+
+class ArvoredePrefixo {
+  public raiz: No;
+
+  constructor () {
+    this.raiz = new No(null)
+  }
+
+  public adicionar() { }
+  
+  public contem () { }
+
+  public buscar() { }
+  
+  public remover () { }
+}
+
+/*
 const Node = function (key) {
   this.key = key;
   this.parent = null;
@@ -137,4 +179,4 @@ console.log(trie.has("pepper"));
 trie.remove("pepper");
 // check search method
 console.log(trie.search("pi"));  
-console.log(trie.search("pe")); 
+console.log(trie.search("pe"));  */
