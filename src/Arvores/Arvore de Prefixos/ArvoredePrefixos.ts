@@ -1,6 +1,3 @@
-// https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/tries.html
-// https://people.cs.pitt.edu/~aus/cs1501/search-b-tree.pdf
-
 // Nó
 class No { 
   public valor: string | null;
