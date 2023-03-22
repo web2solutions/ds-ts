@@ -18,9 +18,9 @@ describe('Arvore de Prefixo', () => {
       it('deve conter o método chavesComOPrefixo()', () => {
         expect(arvore).toHaveProperty('chavesComOPrefixo');
       });
-      it('deve conter o método chavesComOCoringa()', () => {
-        expect(arvore).toHaveProperty('chavesComOCoringa');
-      });
+      // it('deve conter o método chavesComOCoringa()', () => {
+      //  expect(arvore).toHaveProperty('chavesComOCoringa');
+      // });
     });
     describe('checar operações suportadas', () => {
       it('deve suportar operações de inclusão e busca exata de palavras - adicionar(palavra) && busca(palavra)', () => {
@@ -53,6 +53,10 @@ describe('Arvore de Prefixo', () => {
       });
       it('buscar chaves por prefixo com string vazia deve retornar zero palavras', () => {
         const palavrasEncontradas = arvore.chavesComOPrefixo('');
+        expect(palavrasEncontradas.length).toBe(0);
+      });
+      it('buscar chaves por prefixo desconhecido deve retornar zero palavras', () => {
+        const palavrasEncontradas = arvore.chavesComOPrefixo('xxxx');
         expect(palavrasEncontradas.length).toBe(0);
       });
       it('deve suportar operações de remoção de palavras', () => {

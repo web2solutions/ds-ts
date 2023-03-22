@@ -8,7 +8,7 @@ class No {
   constructor(valor: string | null) {
     this.valor = valor;
     this.pai = null;
-    this.ramos = new Map();
+    this.ramos = new Map<string, No>();
     this.terminal = false;
   }
 
@@ -116,7 +116,7 @@ export class ArvoredePrefixos {
     }
   }
 
-  public chavesComOCoringa (prefixo: string): string[] {
+  /* public chavesComOCoringa (prefixo: string): string[] {
     if (prefixo === '') {
       return [];
     }
@@ -139,18 +139,13 @@ export class ArvoredePrefixos {
     // pegar todas as palavras dada uma sub-árvore
     this.pegaPalavas(no, palavras);
     return palavras;
-  }
+  } */
 
   
   // remove uma palavra da árvore
   public remover (palavra: string): void {
     // pega o primeiro nó do ramo, nesse caso a raiz
     let no = this.raiz;
-
-    if (!palavra) {
-      return
-    }
-
     this.removerChave(no, palavra);
   }
 
