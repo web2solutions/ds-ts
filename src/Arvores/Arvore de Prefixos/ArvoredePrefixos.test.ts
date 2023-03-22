@@ -51,9 +51,13 @@ describe('Arvore de Prefixo', () => {
         expect(palavrasEncontradas[0]).toBe('vendas');
         expect(palavrasEncontradas[1]).toBe('vender');
       });
-      it('busca com string vazia deve retornar zero palavras', () => {
+      it('buscar chaves por prefixo com string vazia deve retornar zero palavras', () => {
         const palavrasEncontradas = arvore.chavesComOPrefixo('');
         expect(palavrasEncontradas.length).toBe(0);
+      });
+      it('deve suportar operações de remoção de palavras', () => {
+        arvore.remover('você');
+        expect(arvore.busca('você')).toBeFalsy();
       });
     });
   })
