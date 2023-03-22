@@ -21,9 +21,9 @@ Os tipos de dados mais comuns são:
 
 Como a linguagem Typescript é um superset do Javascript, logo seus tipos de dados são herdados da linguagem Javascript. Os tipos de dados podem ser primitivos ou não primitivos.
 
-- [Dados Primitivos](/docs/DadosPrimitivos.md)
+- [Dados Primitivos](DadosPrimitivos.html)
 
-- [Dados não Primitivos](/docs/DadosnaoPrimitivos.md)
+- [Dados não Primitivos](DadosnaoPrimitivos.html)
 
 
 ## O que é Estrutura de dados?
@@ -41,22 +41,22 @@ Além disso, uma estrutura de dados é um objeto que armazena dados de forma efi
 - `Homogênias` ou `heterogêneas`
 - `Estáticas` ou `dinâmicas`
 
-1. [Pilhas - Stacks](/docs/Pilhas.md)
-2. [Filas - Queues](/docs/Filas.md)
-3. [Listas Encadeadas - Linked Lists](/docs/ListasEncadeadas.md)
+1. [Pilhas - Stacks](Pilhas.html)
+2. [Filas - Queues](Filas.html)
+3. [Listas Encadeadas - Linked Lists](ListasEncadeadas.html)
     - Duplamente ligadas
-5. [Montes - Heaps](/docs/ListasEncadeadas.md)
+5. [Montes - Heaps](ListasEncadeadas.html)
     - MaxHeap
     - MinHeap
-6. [Árvores - Tree](/docs/Arvores.md)
-7. [Árvores Binárias - Binary Trees](/docs/Arvores.md)
-8. [Árvores de Busca Binárias - Binary Search Trees](/docs/Arvores.md)
-9. [Graphs](/docs/ListasEncadeadas.md)
+6. [Árvores - Tree](Arvores.html)
+7. [Árvores Binárias - Binary Trees](Arvores.html)
+8. [Árvores de Busca Binárias - Binary Search Trees](Arvores.html)
+9. [Graphs](ListasEncadeadas.html)
 
 
 ### Referências:
 
-- https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Data_structures
+- https://developer.mozilla.org/pt-BRWeb/JavaScript/Data_structures
 
 - https://www.dimap.ufrn.br/~umberto/paed/lista04.pdf
 
