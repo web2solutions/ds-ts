@@ -4,7 +4,7 @@
   "description": "Data structures with Typescript",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest ./src --coverage=true",
+    "test": "npx jest ./src --coverage=true --verbose --logHeapUsage ",
     "lint": "eslint . --ext .ts"
   },
   "author": "",
