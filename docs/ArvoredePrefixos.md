@@ -35,7 +35,7 @@ Em uma `árvore de prefixos`, os ramos são prefixos que podem compor múltiplas
 
 O primeiro caractere da chave é um nó filho da raiz da árvore. Os caracteres sucessores são nós filhos de seus antecessessores, respectivamente.
 
-O último caractere da palavra é conhecido como sendo o útimo nó de uma chave.
+O último caractere da palavra é conhecido como sendo o `nó terminal` de uma chave.
 
 Dito isto, palavras que compartilham o mesmo prefixo, compartilham o mesmo ramo na árvore.
 
