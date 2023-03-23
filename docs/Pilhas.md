@@ -162,3 +162,14 @@ export class Pilha <T> {
   }
 }
 ```
+
+## Uso
+
+```typescript
+const valores = ['arroz', 'feijão', 'farinha'];
+const pilha = new Pilha<string>({ valores, capacidade: 30 }); // ou new Pilha({ valores })
+
+while (pilha.tamanho < (pilha.capacidade)) {
+    pilha.empilhar('açúcar');
+}
+```
