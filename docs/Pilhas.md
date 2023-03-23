@@ -51,12 +51,22 @@ O índice t indica a primeira posição vaga do vetor e t-1 é o índice do topo
 Para remover, ou tirar, um elemento da pilha — essa operação é conhecida como desempilhar (= to pop) — faça
 
    x = pilha[--t];
-Isso equivale ao par de instruções  t -= 1;  x = pilha[t];.  É claro que você só deve desempilhar se tiver certeza de que a pilha não está vazia.
+
+Isso equivale ao par de instruções  
+
+    t -= 1;  x = pilha[t];
+
+É claro que você só deve desempilhar se tiver certeza de que a pilha não está vazia.
 
 Para inserir, ou colocar, um objeto y na pilha — a operação é conhecida como empilhar (= to push) — faça
 
-   pilha[t++] = y;  
-Isso equivale ao par de instruções  pilha[t] = y;  t += 1;.  Antes de empilhar, certifique-se de que a pilha não está cheia, para evitar um transbordamento (= overflow). 
+    pilha[t++] = y;
+
+Isso equivale ao par de instruções
+
+    pilha[t] = y;  t += 1;
+
+Antes de empilhar, certifique-se de que a pilha não está cheia, para evitar um transbordamento (= overflow).
 
 Para facilitar a leitura do código, é conveniente embalar essas operações em duas pequenas funções. Se os objetos com que estamos lidando são do tipo char, podemos escrever:
 
