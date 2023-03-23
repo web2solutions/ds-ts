@@ -35,7 +35,7 @@ As estruturas de dados definem a organização, métodos de acesso e opções de
 Além disso, uma estrutura de dados é um objeto que armazena dados de forma eficiente, oferecendo certos “serviços” para o usuário (ordenação eficiente dos dados, busca por meio de palavras chave, etc).
 
 
-` Características das Estruturas de Dados`
+`Características das Estruturas de Dados`
 
 - `Lineares` ou `não lineares`
 - `Homogênias` ou `heterogêneas`
