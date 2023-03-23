@@ -245,6 +245,7 @@ arvore.adicionar('você');
 
 
 const palavrasEncontradas = arvore.chavesComOPrefixo('v');
+console.log(palavrasEncontradas) // ['vendas', 'vender', 'vendido', 'você']
 console.log(palavrasEncontradas.length) // 44
 console.log(palavrasEncontradas[0]) // vendas
 console.log(palavrasEncontradas[1]) // vender
