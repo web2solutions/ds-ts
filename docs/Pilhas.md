@@ -18,7 +18,7 @@ Digamos que a parte do vetor ocupada pela pilha é:
 
 O índice t indica a primeira posição vaga do vetor e t-1 é o índice do topo da pilha.  A pilha está vazia se t vale 0 e cheia se t vale N.  No exemplo da figura, os caracteres A, B, … , H foram inseridos na pilha nessa ordem:
 
-<table class="myarray" border="1">
+<table class="myarray" border="1" style="size: 400px;">
 <tbody><tr class="indices">
    <td><kbd>0</kbd>
    </td><td>&nbsp;
