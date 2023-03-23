@@ -80,7 +80,8 @@ Caso a pilha esteja `cheia` e haja a tentativa de um `empilhamento` deve ocorrer
 
 ## Implementação
 
-    Apesar do tipo de dados dos elementos do vetor ser irrelevante, a implementação á seguir associa um tipo aos dados do vetor.
+    Apesar do tipo de dados dos elementos do vetor ser irrelevante, a implementação á seguir 
+    associa um tipo aos dados do vetor.
 
 ```typescript
 export class Pilha <T> {
