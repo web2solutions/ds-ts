@@ -58,13 +58,16 @@ Para inserir, ou colocar, um objeto y na pilha — a operação é conhecida com
    pilha[t++] = y;  
 Isso equivale ao par de instruções  pilha[t] = y;  t += 1;.  Antes de empilhar, certifique-se de que a pilha não está cheia, para evitar um transbordamento (= overflow). 
 
-Para facilitar a leitura do código, é conveniente embalar essas operações em duas pequenas funções. Se os objetos com que estamos lidando são do tipo char, podemos escrever
+Para facilitar a leitura do código, é conveniente embalar essas operações em duas pequenas funções. Se os objetos com que estamos lidando são do tipo char, podemos escrever:
 
-char desempilha (void) {
-   return pilha[--t];
-}
+```C
+    char desempilha (void) {
+        return pilha[--t];
+    }
 
-void empilha (char y) {
-   pilha[t++] = y;
-}
+    void empilha (char y) {
+        pilha[t++] = y;
+    }
+```
+
 Estamos supondo aqui que as variáveis pilha e t são globais, ou seja, foram definidas fora do código das funções.  Para completar o pacote, precisaríamos de mais três funções: uma que crie uma pilha, uma que verifique se a pilha está vazia e uma que verifique se a pilha está cheia. (Veja exercício abaixo.)
