@@ -13,7 +13,7 @@ Esse padrão é conhecido pela sigla `LIFO`, que significa `Last-In-First-Out`.
 
 ## Implementação em um vetor
 
-Suponha que nossa pilha está armazenada em um vetor, onde `N` é o tamanho/capacidade da pilha:
+Suponha que nossa pilha está armazenada em um vetor, onde `N` é o capacidade ou comprimento máximo da pilha:
 
         pilha[0..N-1]
 
