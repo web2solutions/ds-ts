@@ -1,4 +1,13 @@
-export class Pilha <T> {
+interface InterfacePilha<T> {
+  empilhar: (valor: T) => void;
+  desempilhar: () => T;
+  tamanho: number;
+  capacidade: number;
+  itemNoTopo: T;
+  estaVazia: boolean;
+}
+
+export class Pilha<T> implements InterfacePilha<T> {
   /** 
    * vetor para armazenar os dados da pilha
    */
@@ -30,12 +39,11 @@ export class Pilha <T> {
   }
   
   // empilhar item no topo da pilha
-  public empilhar(valor: T): Array<T> {
+  public empilhar(valor: T): void {
     if (this.tamanho === this.capacidade) {
       throw new Error('Pilha transbordada - Stack overflow')
     }
     this.pilha.push(valor);
-    return this.pilha;
   }
   
   // tirar o último ítem da lista

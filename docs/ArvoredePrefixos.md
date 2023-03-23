@@ -231,3 +231,21 @@ export class ArvoredePrefixos {
 }
 
 ```
+
+
+## Uso
+
+```typescript
+const arvore = new ArvoredePrefixos();
+
+arvore.adicionar('vendas');
+arvore.adicionar('vender');
+arvore.adicionar('vendido');
+arvore.adicionar('você');
+
+
+const palavrasEncontradas = arvore.chavesComOPrefixo('v');
+console.log(palavrasEncontradas.length) // 44
+console.log(palavrasEncontradas[0]) // vendas
+console.log(palavrasEncontradas[1]) // vender
+```
