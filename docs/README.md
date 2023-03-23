@@ -41,18 +41,35 @@ Além disso, uma estrutura de dados é um objeto que armazena dados de forma efi
 - `Homogênias` ou `heterogêneas`
 - `Estáticas` ou `dinâmicas`
 
-1. [Pilhas - Stacks](Pilhas.html)
-2. [Filas - Queues](Filas.html)
-3. [Listas Encadeadas - Linked Lists](ListasEncadeadas.html)
-    - Duplamente ligadas
-5. [Montes - Heaps](ListasEncadeadas.html)
-    - MaxHeap
-    - MinHeap
-6. [Árvores - Tries](Arvores.html)
-7. [Árvores de Busca - Search Tries](ArvoredePrefixos.html)
-8. [Árvores Binárias - Binary Tries](Arvores.html)
-9. [Árvores de Busca Binárias - Binary Search Tries](Arvores.html)
-10. [Graphs](ListasEncadeadas.html)
+### Pilhas
+
+[Pilhas - Stacks](Pilhas.html)
+
+### Filas
+
+[Filas - Queues](Filas.html)
+
+### Listas
+
+[Listas Encadeadas - Linked Lists](ListasEncadeadas.html)
+
+- Simples
+- Duplamente ligadas
+
+### Montes
+
+[Montes - Heaps](ListasEncadeadas.html)
+
+- MaxHeap
+- MinHeap
+
+### Árvores
+
+- [Árvores - Tries](Arvores.html)
+- [Árvores de Busca - Search Tries](ArvoredePrefixos.html)
+- [Árvores Binárias - Binary Tries](Arvores.html)
+- [Árvores de Busca Binárias - Binary Search Tries](Arvores.html)
+- [Graphs](ListasEncadeadas.html)
 
 
 ## Referências
