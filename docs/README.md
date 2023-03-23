@@ -49,8 +49,8 @@ Além disso, uma estrutura de dados é um objeto que armazena dados de forma efi
     - MaxHeap
     - MinHeap
 6. [Árvores - Tries](Arvores.html)
-7. [Árvores Binárias - Binary Tries](Arvores.html)
-8. [Árvores de Busca - Search Tries](ArvoredePrefixos.html)
+7. [Árvores de Busca - Search Tries](ArvoredePrefixos.html)
+8. [Árvores Binárias - Binary Tries](Arvores.html)
 9. [Árvores de Busca Binárias - Binary Search Tries](Arvores.html)
 109. [Graphs](ListasEncadeadas.html)
 
