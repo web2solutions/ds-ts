@@ -4,6 +4,8 @@ Uma pilha ou o inglês, stack, é uma estrutura de dados que admite remoção de
 
 Em outras palavras, o primeiro objeto a ser inserido na pilha é o último a ser removido. Esse padrão é conhecido pela sigla LIFO `Last-In-First-Out`.
 
+![Pilha](Pilha.png "Pilha")
+
 ## Implementação em um vetor
 
 Suponha que nossa pilha está armazenada em um vetor:
