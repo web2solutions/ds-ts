@@ -173,3 +173,101 @@ while (pilha.tamanho < pilha.capacidade) {
     pilha.empilhar('açúcar');
 }
 ```
+
+## Solução de Problemas
+
+### Balanceamento de parênteses
+
+A capacidade de diferenciar entre sequências de parênteses corretamente balanceadas daquelas que estão desbalanceadas é um componente importante no reconhecimento estruturas em muitas linguagens de programação.
+
+O desafio então é escrever um algoritmo que leia uma string de parênteses da esquerda para a direita e decida se os parênteses estão balanceados. Para resolver este problema, precisamos fazer uma observação importante. Ao examinar da esquerda para a direita os símbolos na string, cada fecha parêntese deve ser associado ao abre parêntese que foi examinado mais recentemente e ainda não foi associado a um fecha parêntese (veja Figura 4). Além disso, o primeiro abre parêntese examinado pode ter que esperar até o último símbolo da string para encontrar o seu fecha parêntese. Fecha parênteses são associados a abre parênteses na ordem inversa que foram examinados; eles são emparelhados de “dentro para fora”. Este é um indício de que pilhas podem ser usadas para resolver problema.
+
+São considerados os elementos de abertura: `{ [  ( <`
+
+São considerados os elementos de fechamento: `} ]  ) >`
+
+```typescript
+function taBalanceado(caracteres: string | string[]): boolean {
+  // criar pilha vazia
+  const pilha: Pilha<string> = new Pilha({ capacidade: 500 });
+  
+  for (const bracket of caracteres) {
+    if (bracket === '[') {
+      pilha.empilhar(bracket);
+    } else if (bracket === '{') {
+      pilha.empilhar(bracket);
+    } else if (bracket === '<') {
+      pilha.empilhar(bracket);
+    } else if (bracket === '(') {
+      pilha.empilhar(bracket);
+    } else if (bracket === ']') {
+      if (pilha.itemNoTopo === '[') {
+        pilha.desempilhar();
+      } else {
+        pilha.empilhar(bracket);
+      }
+    } else if (bracket === '}') {
+      if (pilha.itemNoTopo === '{') {
+        pilha.desempilhar();
+      } else {
+        pilha.empilhar(bracket);
+      }
+    } else if (bracket === '>') {
+      if (pilha.itemNoTopo === '<') {
+        pilha.desempilhar();
+      } else {
+        pilha.empilhar(bracket);
+      }
+    } else if (bracket === ')') {
+      if (pilha.itemNoTopo === '(') {
+        pilha.desempilhar();
+      } else {
+        pilha.empilhar(bracket);
+      }
+    } else {
+      continue;
+    }
+  }
+  
+  return pilha.tamanho === 0;
+}
+```
+
+`Testes`
+
+```typescript
+    it('a string ([]) deve tá balanceada', () => {
+      expect(taBalanceado('([])'.split(''))).toBeTruthy();
+    });
+    
+    it('a string {} deve tá balanceada', () => {
+      expect(taBalanceado('{}'.split(''))).toBeTruthy();
+    });
+    
+    it('a string ([][]) deve tá balanceada', () => {
+      expect(taBalanceado('([][])'.split(''))).toBeTruthy();
+    });
+    
+    it('a string ([][]<>)() deve tá balanceada', () => {
+      expect(taBalanceado('([][]<>)()'.split(''))).toBeTruthy();
+    });
+    
+    it('a string ([][]<>)(abc) deve tá balanceada', () => {
+      expect(taBalanceado('([][]<>)(abc)'.split(''))).toBeTruthy();
+    });
+    it('a string ((((((((((([][]<>)(abc))))))))))) deve tá balanceada', () => {
+      expect(taBalanceado('((((((((((([][]<>)(abc)))))))))))'.split(''))).toBeTruthy();
+    });
+    
+    it('a string ([>]) não deve tá balanceado', () => {
+      expect(taBalanceado('([>])'.split(''))).toBeFalsy();
+    });
+    
+    it('a string ([]>) não deve tá balanceado', () => {
+      expect(taBalanceado('([]>)'.split(''))).toBeFalsy();
+    });
+    
+    it('a string {}} não deve tá balanceado', () => {
+      expect(taBalanceado('{}}'.split(''))).toBeFalsy();
+    });
+```
