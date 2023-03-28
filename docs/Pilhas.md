@@ -27,7 +27,7 @@ O índice `t` indica a primeira posição vaga do vetor e `t-1` é o índice do 
 
 A pilha está `vazia` se `t vale 0` e `cheia` se `t vale N`.
 
-No exemplo da figura, os caracteres A, B, … , H foram inseridos na pilha nessa ordem:
+No exemplo á seguir, os caracteres A, B, … , H foram inseridos na pilha nessa ordem:
 
 <table class="myarray" border="1" style="size: 400px;">
 <tbody><tr class="indices">
@@ -180,7 +180,7 @@ while (pilha.tamanho < pilha.capacidade) {
 
 A capacidade de diferenciar entre sequências de parênteses corretamente balanceadas daquelas que estão desbalanceadas é um componente importante no reconhecimento estruturas em muitas linguagens de programação.
 
-O desafio então é escrever um algoritmo que leia uma string de parênteses da esquerda para a direita e decida se os parênteses estão balanceados. Para resolver este problema, precisamos fazer uma observação importante. Ao examinar da esquerda para a direita os símbolos na string, cada fecha parêntese deve ser associado ao abre parêntese que foi examinado mais recentemente e ainda não foi associado a um fecha parêntese (veja Figura 4). Além disso, o primeiro abre parêntese examinado pode ter que esperar até o último símbolo da string para encontrar o seu fecha parêntese. Fecha parênteses são associados a abre parênteses na ordem inversa que foram examinados; eles são emparelhados de “dentro para fora”. Este é um indício de que pilhas podem ser usadas para resolver problema.
+O desafio então é escrever um algoritmo que leia uma string de parênteses da esquerda para a direita e decida se os parênteses estão balanceados. Para resolver este problema, precisamos fazer uma observação importante. Ao examinar da esquerda para a direita os símbolos na string, cada fecha parêntese deve ser associado ao abre parêntese que foi examinado mais recentemente e ainda não foi associado a um fecha parêntese. Além disso, o primeiro abre parêntese examinado pode ter que esperar até o último símbolo da string para encontrar o seu fecha parêntese. Fecha parênteses são associados a abre parênteses na ordem inversa que foram examinados; eles são emparelhados de “dentro para fora”. Este é um indício de que pilhas podem ser usadas para resolver problema.
 
 São considerados os elementos de abertura: `{ [  ( <`
 
