@@ -359,3 +359,5 @@ while (pilha.tamanho < pilha.capacidade) {
 ## Repositório
 
 O código completo poderá ser encontrado em [https://github.com/web2solutions/ds-ts/tree/main/src/Pilhas](https://github.com/web2solutions/ds-ts/tree/main/src/Pilhas).
+
+Todos os arquivos para download: [https://github.com/web2solutions/ds-ts/raw/main/src/Pilhas.zip](https://github.com/web2solutions/ds-ts/raw/main/src/Pilhas.zip)
