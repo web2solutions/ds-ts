@@ -109,7 +109,7 @@ Caso a pilha esteja `cheia` e haja a tentativa de um `empilhamento` deve ocorrer
   associa um tipo de dado específico aos ítems do vetor.
 
  
-*a*Vamos ao código**
+**Vamos ao código**
 
 
 ```typescript
