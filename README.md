@@ -4,6 +4,6 @@ O propósito desse repositório é compartilhar com desenvolvedores e engenheiro
 
 Se você quer aprender Typescript, provavelmente está procurando pela [documentação oficial da linguagem](https://www.typescriptlang.org/).
 
-[Conteúdo do estudo](/docs/README.md)
+[Conteúdo do estudo](https://web2solutions.github.io/ds-ts/)
 
 [Códigos](/src)
