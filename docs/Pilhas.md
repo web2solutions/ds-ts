@@ -303,9 +303,17 @@ function taBalanceado(caracteres: string | string[]): boolean {
 
 ### Benchmark
 
-Considerando a idéia de `Pilha` e `Pilha inversa` citada anteriormente. Veja a seguir o benchmark para cada tipo de implementação:
+`Hardware`
+
+Mac Mini 
+
+Processor: 3 GHz 6-Core Intel Core i5
+
+Memory: 32 GB 2667 MHz DDR4
 
 `Requerimento`
+
+Considerando a idéia de `Pilha` e `Pilha inversa` citada anteriormente. Veja a seguir o benchmark para cada tipo de implementação:
 
 O programa deverá criar uma Pilha contendo os ítens 'arroz', 'feijão', 'farinha' e com capacidade de 100.000 ítens.
 
