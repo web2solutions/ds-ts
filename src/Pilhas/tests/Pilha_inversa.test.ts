@@ -1,4 +1,4 @@
-import { Pilha } from './Pilha'
+import { Pilha } from '../Pilha_inversa'
 
 function taBalanceado(caracteres: string | string[]): boolean {
   // criar pilha vazia

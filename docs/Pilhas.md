@@ -59,7 +59,7 @@ No exemplo á seguir, os caracteres A, B, … , H foram inseridos na pilha nes
 </td></tr></tbody></table>
 
 
-Conceitualmente, para desempilhar (remover - pop) um elemento da pilha, faça: 
+Conceitualmente, para desempilhar (remover) um elemento da pilha, faça: 
 
 ```C
     t -= 1;
@@ -68,7 +68,7 @@ Conceitualmente, para desempilhar (remover - pop) um elemento da pilha, faça:
 
 Não é possível desempilhar em uma pilha vazia.
 
-Conceitualmente, para empilhar (inserir - push) um ítem y na pilha, faça:
+Conceitualmente, para empilhar (inserir) um ítem y na pilha, faça:
 
 
 ```C
@@ -78,10 +78,39 @@ Conceitualmente, para empilhar (inserir - push) um ítem y na pilha, faça:
 
 Caso a pilha esteja `cheia` e haja a tentativa de um `empilhamento` deve ocorrer um `transbordamento`. Do inglês: `overflow`, ou, `stack oveflow`.
 
-## Implementação
+## Implementação de uma Pilha usando a linguagem Typescript.
 
-    Apesar do tipo de dados dos elementos do vetor ser irrelevante, a implementação á seguir 
-    associa um tipo aos dados do vetor.
+  ***`Posição no vetor`***
+
+  O principal requerimento funcional da pilha é:
+  
+  `primeiro objeto a ser inserido na pilha é o último a ser removido`.
+
+  Com isso fica aberta a possibilidade de usar o início do vetor como topo e o final como base da pilha. Darei o nome á essa implementação de `Pilha inversa`.
+  
+      topo = Pilha[0]
+      base = Pilha[Pilha.length - 1]
+  
+  Porém, na implementação á seguir, o final do vetor será o topo e o começo será a base da pilha.
+
+      topo = Pilha[Pilha.length - 1]
+      base = Pilha[0]
+  
+  Implementarei ao algirítimo da pilha dessa forma visando uma maior performance. Em Javascript, ao lidar com `vetores` contendo muitos ítens, é mais custoso manipular os primeiros elementos do que os últimos.
+
+ ***`Capacidade da Pilha`***
+  
+  `Vetores` em javascript se comportam um pouco diferente do que em outras linguagens. a Pilha poderia ser criaada associando um tamanho ao array, `pilha = new Array(10)`, mas isso criaria um vetor com 10 slots vazios e não um vetor com 10 slots com valores indefinidos. Logo criaremos um vetor com tamanho dinâmico e usaremos uma variável auxiliar para emular a capacidade máxima da pilha.
+
+
+  ***`Tipo da pilha`***
+  
+  Apesar do tipo de dados dos elementos do vetor ser irrelevante, a implementação á seguir 
+  associa um tipo de dado específico aos ítems do vetor.
+
+ 
+*a*Vamos ao código**
+
 
 ```typescript
 export class Pilha <T> {
@@ -233,7 +262,7 @@ function taBalanceado(caracteres: string | string[]): boolean {
 }
 ```
 
-`Testes`
+### `Testes`
 
 ```typescript
     it('a string ([]) deve tá balanceada', () => {
@@ -271,3 +300,54 @@ function taBalanceado(caracteres: string | string[]): boolean {
       expect(taBalanceado('{}}'.split(''))).toBeFalsy();
     });
 ```
+
+### Benchmark
+
+Considerando a idéia de `Pilha` e `Pilha inversa` citada anteriormente. Veja a seguir o benchmark para cada tipo de implementação:
+
+`Requerimento`
+
+O programa deverá criar uma Pilha contendo os ítens 'arroz', 'feijão', 'farinha' e com capacidade de 100.000 ítens.
+
+Após a pilha ser criada, o programa deverá empilhar novos ítens até atingir a capacidade máxima da pilha.
+
+```typescript
+const valores = ['arroz', 'feijão', 'farinha'];
+
+const pilha = new Pilha<string>({ valores, capacidade: 100000 }); // ou new Pilha({ valores })
+
+while (pilha.tamanho < pilha.capacidade) {
+  pilha.empilhar('açúcar');
+}
+```
+
+#### Resultados
+
+- `Pilha` - 100.000 ítens
+
+      $ ts-node ./src/Pilhas/benchmark/pilha.ts
+      Tempo de execução: 5.504647 ms
+      consumo aproximado: 100.20630645751953 MB
+
+- `Pilha inversa` - 100.000 ítens
+
+      ts-node ./src/Pilhas/benchmark/pilha_inversa.ts
+      Tempo de execução: 928.442721 ms
+      consumo aproximado: 100.38533782958984 MB
+
+
+- `Pilha` - 500.000 ítens
+
+      $ ts-node ./src/Pilhas/benchmark/pilha.ts
+      Tempo de execução: 12.728368 ms
+      consumo aproximado: 111.29053497314453 MB
+
+- `Pilha inversa` - 500.000 ítens
+
+      ts-node ./src/Pilhas/benchmark/pilha_inversa.ts
+      Tempo de execução: 25577.447571 ms
+      consumo aproximado: 111.19620513916016 MB
+
+## Repositório
+
+O código completo poderá ser encontrado em [https://github.com/web2solutions/ds-ts/tree/main/src/Pilhas](https://github.com/web2solutions/ds-ts/tree/main/src/Pilhas).
