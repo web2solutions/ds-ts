@@ -66,9 +66,9 @@ Além disso, uma estrutura de dados é um objeto que armazena dados de forma efi
 ### Árvores
 
 - [Árvores - Tries](Arvores.html)
-- [Árvores de Busca - Search Tries](ArvoredePrefixos.html)
-- [Árvores Binárias - Binary Tries](Arvores.html)
-- [Árvores de Busca Binárias - Binary Search Tries](Arvores.html)
+- [Árvores de Busca - Tries](ArvoredePrefixos.html)
+- [Árvores Binárias - Binary Tree](Arvores.html)
+- [Árvores de Busca Binárias - Binary Search Tree](Arvores.html)
 - [Graphs](ListasEncadeadas.html)
 
 

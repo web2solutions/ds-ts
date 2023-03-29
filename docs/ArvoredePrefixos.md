@@ -1,6 +1,6 @@
 # Árvores de prefixo / Tries
 
-Do inglês `Trie`, uma `árvore de prefixos`, ou também uma `árvore digital`, é uma estrutura de dados usada para implementar [`Tabelas de Símbolos`](https://pt.wikipedia.org/wiki/Tabela_de_s%C3%ADmbolos) de strings. Muito útil para `buscas` de sequências de caracteres por prefixos, como nomes de pessoas, palavras de um livro e DNA.
+Do inglês `Trie` ou `prefix tree`, uma `árvore de prefixos`, ou também uma `árvore digital`, é uma estrutura de dados usada para implementar [`Tabelas de Símbolos`](https://pt.wikipedia.org/wiki/Tabela_de_s%C3%ADmbolos) de strings. Muito útil para `buscas` de sequências de caracteres por prefixos, como nomes de pessoas, palavras de um livro e DNA.
 
 É ainda conhecida como `R-way trie` `(RT)`, cada nó pode ter `R` filhos. Onde o alfabeto das chaves tem R caracteres e que R = 256 (às vezes só 26, mas não 65536).
 
