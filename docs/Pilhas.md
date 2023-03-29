@@ -96,7 +96,7 @@ Caso a pilha esteja `cheia` e haja a tentativa de um `empilhamento` deve ocorrer
       topo = Pilha[Pilha.length - 1]
       base = Pilha[0]
   
-  Implementarei ao algirítimo da pilha dessa forma visando uma maior performance. Em Javascript, ao lidar com `vetores` contendo muitos ítens, é mais custoso manipular os primeiros elementos do que os últimos.
+  Implementarei o algorítimo da pilha dessa forma visando uma maior performance. Em Javascript, ao lidar com `vetores` contendo muitos ítens, é mais custoso manipular os primeiros elementos do que os últimos.
 
  ***`Capacidade da Pilha`***
   
