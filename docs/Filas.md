@@ -30,7 +30,7 @@ Independentemente do tamanho N da fila, numa fila ideal utilizando vetores, oper
 `Complexidade de espaço`: O(1)
 
 
-### Pilha.primeiroDaFila
+#### Pilha.primeiroDaFila
 
 `Complexidade de tempo`: O(1)
 
