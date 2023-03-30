@@ -14,10 +14,9 @@ export class FilaMap<T> {
     this.indexComecoDaFila = 0;
     this.indexFinalDaFila = -1;
 
-    const itens = valores;
-    if (itens && itens?.length > 0) {
-      for (let x = 0; x < itens.length; x++) {
-        const valor = itens[x];
+    if (valores && valores?.length > 0) {
+      for (let x = 0; x < valores.length; x++) {
+        const valor = valores[x];
         this.enfileirar(valor);
       }
     }
