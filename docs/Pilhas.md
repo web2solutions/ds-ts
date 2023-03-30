@@ -11,6 +11,30 @@ Esse padrão é conhecido pela sigla `LIFO`, que significa `Last-In-First-Out`.
 
 ![Pilha](Pilha.png "Pilha")
 
+
+### Complexidade de tempo e espaço - Big O
+
+Independentemente do tamanho N da pilha, numa pilha ideal, operações básicas devem ocorrer em `O(1)` - `tempo constante` considerando a memória já alocada.  A complexidade será O(n) quando a memória alocada for excedida em operações de inserção.
+
+#### Pilha.empilhar
+
+`Complexidade de tempo`: O(1)
+
+`Complexidade de espaço`: O(1)
+
+#### Pilha.desempilhar
+
+`Complexidade de tempo`: O(1)
+
+`Complexidade de espaço`: O(1)
+
+
+### Pilha.itemNoTopo
+
+`Complexidade de tempo`: O(1)
+
+`Complexidade de espaço`: O(1)
+
 ## Implementação em um vetor
 
 Suponha que nossa pilha está armazenada em um vetor, onde `N` é o capacidade ou comprimento máximo da pilha:
