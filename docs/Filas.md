@@ -53,17 +53,17 @@ export class FilaVetor<T> {
   /**
    * Vetor para armazenamento dos dados
    */
-  public fila: Array<T | undefined>;
+  private fila: Array<T | undefined>;
 
   /**
    * controla o final da fila
    */
-  public indexFinalDaFila: number;
+  private indexFinalDaFila: number;
   
   /**
    * controla o começo da fila
    */
-  public indexComecoDaFila: number;
+  private indexComecoDaFila: number;
 
   /**
    * controla o tamanho da fila

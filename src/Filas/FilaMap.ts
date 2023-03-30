@@ -1,9 +1,9 @@
 export class FilaMap<T> {
   
-  public fila: Map<number, T | undefined>;
+  private fila: Map<number, T | undefined>;
 
-  public indexFinalDaFila: number;
-  public indexComecoDaFila: number;
+  private indexFinalDaFila: number;
+  private indexComecoDaFila: number;
 
   private _tamanho: number;
 
