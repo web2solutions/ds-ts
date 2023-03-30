@@ -45,7 +45,7 @@ Caso a fila esteja `vazia` e haja a tentativa de um `desenfileiramento` deve oco
   Apesar do tipo de dados dos elementos do vetor ser irrelevante, a implementação á seguir 
   associa um tipo de dado específico aos ítems do vetor.
 
-#### Implementação em um vetor
+### Implementação em um vetor
 
 
 ```typescript
@@ -168,6 +168,9 @@ export class FilaVetor<T> {
   }
 }
 ```
+
+
+### Implementação em uma Lista Ligada
 
 ## Uso
 
