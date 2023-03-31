@@ -61,7 +61,7 @@ O índice `C` indica a primeira posição ocupada do vetor, em outras palavras, 
 
 A fila está `vazia` se `F vale 0` e `cheia` se `F vale N-1`. Uma fila vazia poderia ser desenhada da seguinte forma.
 
-<table class="myarray" border="1" style="size: 400px;">
+<table class="myarray" border="1" style="size: 400px; color: #ffffff;">
 <tbody><tr class="indices">
    <td><kbd>(-1) C</kbd> / <kbd>N-1</kbd>
    </td><td><kbd>(0) F</kbd>
@@ -71,7 +71,7 @@ A fila está `vazia` se `F vale 0` e `cheia` se `F vale N-1`. Uma fila vazia pod
    </td><td><kbd>(4)</kbd>
    </td><td><kbd>(5)</kbd>
    </td><td>
-</td></tr><tr class="boxes" style="background-color: #333;">
+</td></tr><tr class="boxes" style="background-color: #333; color: #ffffff;">
    <td class="mag">
    </td><td class="mag">
    </td><td class="mag">
@@ -84,7 +84,7 @@ A fila está `vazia` se `F vale 0` e `cheia` se `F vale N-1`. Uma fila vazia pod
 
 Ao enfileirar o nome José numa fila vazia, teríamos:
 
-<table class="myarray" border="1" style="size: 400px;">
+<table class="myarray" border="1" style="size: 400px; color: #ffffff;">
 <tbody><tr class="indices">
    <td><kbd>(0) C</kbd> / <kbd>N-1</kbd>
    </td><td><kbd>(1) F</kbd>
@@ -94,7 +94,7 @@ Ao enfileirar o nome José numa fila vazia, teríamos:
    </td><td><kbd>(5)</kbd>
    </td><td>
    </td><td>
-</td></tr><tr class="boxes" style="background-color: #333;">
+</td></tr><tr class="boxes" style="background-color: #333; color: #ffffff;">
    <td class="mag">José
    </td><td class="mag">
    </td><td class="gry">
@@ -107,7 +107,7 @@ Ao enfileirar o nome José numa fila vazia, teríamos:
 
 Ao enfileirar os nomes João e Jesus, nessa mesma ordem, teríamos:
 
-<table class="myarray" border="1" style="size: 400px;">
+<table class="myarray" border="1" style="size: 400px; color: #ffffff;">
 <tbody><tr class="indices">
    <td><kbd>(0) C</kbd>
    </td><td><kbd>(1)</kbd>
@@ -117,7 +117,7 @@ Ao enfileirar os nomes João e Jesus, nessa mesma ordem, teríamos:
    </td><td><kbd>(5)</kbd>
    </td><td><kbd>(6)</kbd>
    </td><td>
-   </td></tr><tr class="boxes" style="background-color: #333;">
+   </td></tr><tr class="boxes" style="background-color: #333; color: #ffffff;">
    <td class="mag">José
    </td><td class="mag">João
    </td><td class="gry">Jesus
@@ -130,7 +130,7 @@ Ao enfileirar os nomes João e Jesus, nessa mesma ordem, teríamos:
 
 Ao desenfileirar, teríamos:
 
-<table class="myarray" border="1" style="size: 400px;">
+<table class="myarray" border="1" style="size: 400px; color: #ffffff;">
 <tbody><tr class="indices">
    <td><kbd>(0)</kbd>
    </td><td><kbd>(1) C</kbd>
@@ -140,7 +140,7 @@ Ao desenfileirar, teríamos:
    </td><td>
    </td><td>
    </td><td>
-   </td></tr><tr class="boxes" style="background-color: #333;">
+   </td></tr><tr class="boxes" style="background-color: #333; color: #ffffff;">
    <td class="mag"><kbd>indefinido</kbd>
    </td><td class="mag">João
    </td><td class="gry">Jesus
