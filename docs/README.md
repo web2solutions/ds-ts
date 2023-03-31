@@ -34,10 +34,20 @@ As estruturas de dados definem a organização, métodos de acesso e opções de
 
 Além disso, uma estrutura de dados é um objeto que armazena dados de forma eficiente, oferecendo certos “serviços” para o usuário (ordenação eficiente dos dados, busca por meio de palavras chave, etc).
 
-
 `Características das Estruturas de Dados`
 
 - `Lineares` ou `não lineares`
+
+Estrutura de dados cujos itens são ordenados de acordo com ordem que são inseridos ou removidos da estrutura. Uma vez que um item é inserido, fica em uma mesma posição em relação aos demais itens que foram inseridos antes ou que serão inseridos depois.
+
+Estruturas lineares podem ser consideradas como tendo duas extremidades. Às vezes essas estremidades são chamadas de esquerda e direita ou, em alguns casos, de frente e traseira. Você também pode chamá-las de topo e base. 
+
+Os nomes dados às extremidades não são relevantes. O que distingue uma estrutura linear de outra é a maneira em que itens são inseridos e removidos, em particular a extremidade onde estes inserções e remoções ocorrem. Por exemplo, uma estrutura pode permitir que novos itens sejam inseridos em apenas uma das extremidades (pilhas e filas). Algumas estruturas podem permitir que itens sejam removidos de ambas as extremidades (deques).
+
+A estrutura de dados linear e não linear é a subclassificação da estrutura de dados que vem sob a estrutura de dados não-primitivos. A diferença crucial entre eles é que a estrutura de dados linear organiza os dados em uma sequência e segue algum tipo de ordem. Considerando que, a estrutura de dados não lineares não organiza os dados de maneira seqüencial.
+
+A estrutura de dados linear é uma estrutura de dados de nível único, enquanto as estruturas de dados não lineares são a estrutura de dados de vários níveis. A estrutura de dados descreve previamente como os dados são organizados, acessados, associados e processados.
+
 - `Homogênias` ou `heterogêneas`
 - `Estáticas` ou `dinâmicas`
 
