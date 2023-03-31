@@ -21,9 +21,9 @@ export class FilaLigada<T> implements IFila<T> {
   private ultimo: No<T> | null;
   
   /**
-   * controla o tamanho da fila
+   * controla o _tamanho da fila
    */
-  public tamanho: number;
+  private _tamanho: number;
   
   constructor({ valores }: { valores?: T[] }) {
     /**
@@ -31,7 +31,7 @@ export class FilaLigada<T> implements IFila<T> {
      */
     this.primeiro = null;
     this.ultimo = null;
-    this.tamanho = 0;
+    this._tamanho = 0;
 
     /**
      * adiciona valores inicias da fila
@@ -44,31 +44,63 @@ export class FilaLigada<T> implements IFila<T> {
     }
   }
   
+  /**
+   * enfileirar item, colocar no final da fila
+   */
   public enfileirar(valor: T): void {
+    /**
+     * criar no referente ao novo item na fila
+     */
     let no = new No(valor);
-    if(this.tamanho > 0)
+    /**
+     * Se houver itens na fila
+     */
+    if(this._tamanho > 0)
     {
+      /**
+       * Pega o ultimo item da fila atualmente
+       */
       let ultimoEnfileirado = this.ultimo;
       if (ultimoEnfileirado) {
+        /**
+         * Liga o novo nó que está entrando na fila ao último atual.
+         */
         ultimoEnfileirado.proximo = no;
       }
+      /**
+       * atualiza o ponteiro que aponta para diretamente para o último item da fila
+       */
       this.ultimo = no
     } else {
+      /** 
+       * se não houver itens na lista, o novo nó que está entrando 
+       * na lista será apontado para início e o final da fila respectivamente
+       */
       this.ultimo = no;
       this.primeiro = this.ultimo;
     }
-    
-    this.tamanho++;
+    // aumenta o _tamanho da fila
+    this._tamanho++;
   }
   
+  /**
+   * desenfileirar item, tirar do começo da fila
+   */
   public desenfileirar(): T | undefined {
-    if(this.tamanho > 0){
+    // caso haja itens enfileirados
+    if(this._tamanho > 0) {
+      // recupera o valor do primeiro item na fila
       const valor = this.primeiro?.valor;
+      // definir o proximo da fila como o proximo do primeiro atual da fila
       let proximoDaFila = this.primeiro ? this.primeiro.proximo : null;
+      // define primeiro da fila como sendo o item recuperado anteriormente
       this.primeiro =  proximoDaFila;
-      this.tamanho--;    
+      // diminui o _tamanho da fila
+      this._tamanho--;
+      // retorn o valor do primeiro item na fila
       return valor;
     } else {
+      // caso não haja itens enfileirados
       this.ultimo = this.primeiro;
       throw new Error('Fila vazia');
     }
@@ -81,7 +113,7 @@ export class FilaLigada<T> implements IFila<T> {
     /**
     * fila não pode estar fazia
     */
-    if (this.tamanho === 0) {
+    if (this._tamanho === 0) {
       throw new Error('Fila vazia');
     }
     /**
@@ -90,13 +122,26 @@ export class FilaLigada<T> implements IFila<T> {
     return this.primeiro?.valor
   }
   
+  /**
+   * esvaziar a fila
+   */
   public limpar (): void {
     this.primeiro = null;
     this.ultimo = null;
-    this.tamanho = 0;
+    this._tamanho = 0;
+  }
+
+  /**
+   * retorna tamanho da fila
+   */
+  public get tamanho(): number {
+    return this._tamanho;
   }
   
+  /**
+   * checa se fila está vazia
+   */
   public get estaVazia (): boolean {
-    return this.tamanho > 0 ? false : true;
+    return this._tamanho > 0 ? false : true;
   }
 }
