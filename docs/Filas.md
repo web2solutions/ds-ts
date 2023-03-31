@@ -47,9 +47,9 @@ Caso a fila esteja `vazia` e haja a tentativa de um `desenfileiramento` deve oco
 
 ### Implementação em um vetor
 
-Suponha que nossa fila está armazenada em um vetor, onde `N` é o número de elementos dentro do vetor
+Suponha que nossa fila está armazenada em um vetor, o tamanho é `N`, onde `N` é o número de elementos na fila.
 
-        fila[0..N-1]
+        fila[0..N]
 
 O tipo de dados dos elementos do vetor é irrelevante.
 
@@ -57,20 +57,20 @@ Digamos que a parte do vetor ocupada pela fila é:
 
         fila[C..F]
 
-O índice `C` indica a primeira posição ocupada do vetor, que nesse caso é `0 zero` e `F` é o índice da  posição final da fila.
+O índice `C` indica a primeira posição ocupada do vetor, em outras palavras, o index que represeta o primeiro item da fila. E `F` é o índice na posição final da fila.
 
-A fila está `vazia` se `F vale 0` e `cheia` se `F vale N-1`.
+A fila está `vazia` se `F vale 0` e `cheia` se `F vale N-1`. Uma fila vazia poderia ser desenhada da seguinte forma.
 
 <table class="myarray" border="1" style="size: 400px;">
 <tbody><tr class="indices">
-   <td><kbd>(-1) C</kbd>
+   <td><kbd>(-1) C</kbd> / <kbd>N-1</kbd>
    </td><td><kbd>(0) F</kbd>
+   </td><td><kbd>(1)</kbd>
+   </td><td><kbd>(2)</kbd>
+   </td><td><kbd>(3)</kbd>
+   </td><td><kbd>(4)</kbd>
+   </td><td><kbd>(5)</kbd>
    </td><td>
-   </td><td>
-   </td><td>
-   </td><td>&nbsp;
-   </td><td>&nbsp;
-   </td><td><kbd>N-1</kbd>
 </td></tr><tr class="boxes" style="background-color: #333;">
    <td class="mag">
    </td><td class="mag">
@@ -81,21 +81,72 @@ A fila está `vazia` se `F vale 0` e `cheia` se `F vale N-1`.
    </td><td class="gry">&nbsp;
 </td></tr></tbody></table>
 
-No exemplo á seguir, os nomes José, João e Jesus foram inseridos na fila nessa ordem:
+
+Ao enfileirar o nome José numa fila vazia, teríamos:
 
 <table class="myarray" border="1" style="size: 400px;">
 <tbody><tr class="indices">
-   <td><kbd>-1</kbd>
-   </td><td><kbd>(0) C</kbd>
+   <td><kbd>(0) C</kbd> / <kbd>N-1</kbd>
+   </td><td><kbd>(1) F</kbd>
+   </td><td><kbd>(2)</kbd>
+   </td><td><kbd>(3)</kbd>
+   </td><td><kbd>(4)</kbd>
+   </td><td><kbd>(5)</kbd>
    </td><td>
-   </td><td><kbd>(2) F</kbd> / <kbd>N-1</kbd>
-   </td><td><kbd>F+1</kbd>
+   </td><td>
+</td></tr><tr class="boxes" style="background-color: #333;">
+   <td class="mag">José
+   </td><td class="mag">
+   </td><td class="gry">
+   </td><td class="gry">
+   </td><td class="gry">
+   </td><td class="gry">
+   </td><td class="gry">&nbsp;
+</td></tr></tbody></table>
+
+
+Ao enfileirar os nomes João e Jesus, nessa mesma ordem, teríamos:
+
+<table class="myarray" border="1" style="size: 400px;">
+<tbody><tr class="indices">
+   <td><kbd>(0) C</kbd>
+   </td><td><kbd>(1)</kbd>
+   </td><td><kbd>(2) N-1</kbd>
+   </td><td><kbd>(3) F</kbd> /
+   </td><td><kbd>(4)</kbd>
+   </td><td><kbd>(5)</kbd>
+   </td><td><kbd>(6)</kbd>
    </td><td>
    </td></tr><tr class="boxes" style="background-color: #333;">
-   <td class="mag">
-   </td><td class="mag">José
+   <td class="mag">José
    </td><td class="mag">João
    </td><td class="gry">Jesus
+   </td><td class="gry">
+   </td><td class="gry">
+   </td><td class="gry">
+   </td><td class="gry">
+   </td></tr></tbody></table>
+
+
+Ao desenfileirar, teríamos:
+
+<table class="myarray" border="1" style="size: 400px;">
+<tbody><tr class="indices">
+   <td><kbd>(0)</kbd>
+   </td><td><kbd>(1) C</kbd>
+   </td><td><kbd>(2) N-1</kbd>
+   </td><td><kbd>(3) F</kbd>
+   </td><td>
+   </td><td>
+   </td><td>
+   </td><td>
+   </td></tr><tr class="boxes" style="background-color: #333;">
+   <td class="mag"><kbd>indefinido</kbd>
+   </td><td class="mag">João
+   </td><td class="gry">Jesus
+   </td><td class="gry">
+   </td><td class="gry">
+   </td><td class="gry">
    </td><td class="gry">
    </td></tr></tbody></table>
 
