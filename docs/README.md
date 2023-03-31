@@ -53,7 +53,7 @@ A estrutura de dados linear é uma estrutura de dados de nível único, enquanto
 
 ### Pilhas
 
-Pilhas são estruturas de dados que suportam operações de adição e remoção de elementos e obrigatoriamente deve implementar as seguintes regras:  
+Pilhas, ou stacks, são estruturas de dados que suportam operações de adição e remoção de elementos e obrigatoriamente deve implementar as seguintes regras:  
 
 1. A adição de novos elementos é feita no topo da estrutura.
 2. Na remoção, o elemento removido é o que está na estrutura há menos tempo. Ou seja, o elemento removido é que se encontra no topo.
@@ -62,7 +62,7 @@ Pilhas são estruturas de dados que suportam operações de adição e remoção
 
 ### Filas
 
-Filas são estruturas de dados que suportam operações de `adição (enfileirar)` e `remoção (desenfileirar)` de elementos e obrigatoriamente deve implementar as seguintes regras:  
+Filas, ou queues, são estruturas de dados que suportam operações de `adição (enfileirar)` e `remoção (desenfileirar)` de elementos e obrigatoriamente deve implementar as seguintes regras:  
 
 1. O acesso á estrutura é restrito ao elemento mais antigo
 2. Na remoção, o elemento removido é o que está na estrutura há mais tempo. Ou seja, o elemento removido é que se encontra no começo da fila.
