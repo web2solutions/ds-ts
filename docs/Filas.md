@@ -275,6 +275,9 @@ export class FilaVetor<T> {
 ## Implementação em uma Lista Ligada
 
 ```typescript
+/**
+ * O nó representa um item na fila contendo um valor e uma ligação para o póximo item na fila
+ */
 class No<T> {
   public valor: T;
   public proximo: No<T> | null;
