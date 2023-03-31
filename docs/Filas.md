@@ -47,6 +47,58 @@ Caso a fila esteja `vazia` e haja a tentativa de um `desenfileiramento` deve oco
 
 ### Implementação em um vetor
 
+Suponha que nossa fila está armazenada em um vetor, onde `N` é o número de elementos dentro do vetor
+
+        fila[0..N-1]
+
+O tipo de dados dos elementos do vetor é irrelevante.
+
+Digamos que a parte do vetor ocupada pela fila é:
+
+        fila[C..F]
+
+O índice `C` indica a primeira posição ocupada do vetor, que nesse caso é `0 zero` e `F` é o índice da  posição final da fila.
+
+A fila está `vazia` se `F vale 0` e `cheia` se `F vale N-1`.
+
+<table class="myarray" border="1" style="size: 400px;">
+<tbody><tr class="indices">
+   <td><kbd>(-1) C</kbd>
+   </td><td><kbd>(0) F</kbd>
+   </td><td>
+   </td><td>
+   </td><td>
+   </td><td>&nbsp;
+   </td><td>&nbsp;
+   </td><td><kbd>N-1</kbd>
+</td></tr><tr class="boxes" style="background-color: #333;">
+   <td class="mag">
+   </td><td class="mag">
+   </td><td class="mag">
+   </td><td class="gry">&nbsp;
+   </td><td class="gry">&nbsp;
+   </td><td class="gry">&nbsp;
+   </td><td class="gry">&nbsp;
+</td></tr></tbody></table>
+
+No exemplo á seguir, os nomes José, João e Jesus foram inseridos na fila nessa ordem:
+
+<table class="myarray" border="1" style="size: 400px;">
+<tbody><tr class="indices">
+   <td><kbd>-1</kbd>
+   </td><td><kbd>(0) C</kbd>
+   </td><td>
+   </td><td><kbd>(2) F</kbd> / <kbd>N-1</kbd>
+   </td><td><kbd>F+1</kbd>
+   </td><td>
+   </td></tr><tr class="boxes" style="background-color: #333;">
+   <td class="mag">
+   </td><td class="mag">José
+   </td><td class="mag">João
+   </td><td class="gry">Jesus
+   </td><td class="gry">
+   </td></tr></tbody></table>
+
 
 ```typescript
 export class FilaVetor<T> {
