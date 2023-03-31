@@ -1,77 +1,102 @@
-class No {
-  public valor: string;
-  public proximo: No | null;
-  constructor(valor: string) {
+import { IFila } from "./IFila";
+
+class No<T> {
+  public valor: T;
+  public proximo: No<T> | null;
+  constructor(valor: T) {
     this.valor = valor;
     this.proximo = null;
   }
 }
 
-class FilaLigada {
-  public primeiro: No | null;
-  public ultimo: No | null;
+export class FilaLigada<T> implements IFila<T> {
+  /**
+   * ponteiro para o primeiro item da fila
+   */
+  private primeiro: No<T> | null;
+  
+  /**
+   * ponteiro para o último item da fila
+   */
+  private ultimo: No<T> | null;
+  
+  /**
+   * controla o tamanho da fila
+   */
   public tamanho: number;
+  
+  constructor({ valores }: { valores?: T[] }) {
+    /**
+     * inicia a estrutura da fila
+     */
+    this.primeiro = null;
+    this.ultimo = null;
+    this.tamanho = 0;
 
-  constructor(){
+    /**
+     * adiciona valores inicias da fila
+     */
+    if (valores && valores?.length > 0) {
+      for (let x = 0; x < valores.length; x++) {
+        const valor = valores[x];
+        this.enfileirar(valor);
+      }
+    }
+  }
+  
+  public enfileirar(valor: T): void {
+    let no = new No(valor);
+    if(this.tamanho > 0)
+    {
+      let ultimoEnfileirado = this.ultimo;
+      if (ultimoEnfileirado) {
+        ultimoEnfileirado.proximo = no;
+      }
+      this.ultimo = no
+    } else {
+      this.ultimo = no;
+      this.primeiro = this.ultimo;
+    }
+    
+    this.tamanho++;
+  }
+  
+  public desenfileirar(): T | undefined {
+    if(this.tamanho > 0){
+      const valor = this.primeiro?.valor;
+      let proximoDaFila = this.primeiro ? this.primeiro.proximo : null;
+      this.primeiro =  proximoDaFila;
+      this.tamanho--;    
+      return valor;
+    } else {
+      this.ultimo = this.primeiro;
+      throw new Error('Fila vazia');
+    }
+  }
+  
+  /**
+  * capturar o primeiro item da fila
+  */
+  public get primeiroDaFila(): T | undefined {
+    /**
+    * fila não pode estar fazia
+    */
+    if (this.tamanho === 0) {
+      throw new Error('Fila vazia');
+    }
+    /**
+    * pega o item no comeco da fila
+    */
+    return this.primeiro?.valor
+  }
+  
+  public limpar (): void {
     this.primeiro = null;
     this.ultimo = null;
     this.tamanho = 0;
   }
   
-  checarProximo() {
-    return this.primeiro;
-  }
-  
-  enfileirar(valor){
-    let newNode = new No(valor);
-    if(this.tamanho > 0)
-    {
-      let lastQueued = this.ultimo;
-      lastQueued.proximo = newNode;
-      this.ultimo = newNode
-    }
-    else{
-      
-      this.ultimo = newNode;
-      this.primeiro = this.ultimo;
-    }
-    
-    this.tamanho++;
-    return this;
-  }
-  
-  desenfileirar(){
-    if(this.tamanho > 0){
-      let nextQueued = this.primeiro.proximo;
-      this.primeiro =  nextQueued;
-      this.tamanho--;    
-      return this;
-    }
-    else{
-      this.ultimo = this.primeiro;
-      return this;
-    }
-  }
-  
-  estaVazia(){
+  public get estaVazia (): boolean {
     return this.tamanho > 0 ? false : true;
-    
   }
 }
-
-const fila = new Fila();
-fila.enfileirar('google');
-fila.enfileirar('amazon');
-var queue = fila.enfileirar('microsoft');
-console.log(queue);
-var nextToProcess = fila.checarProximo();
-//console.log(fila.estaVazia());
-console.log('Processing :', nextToProcess.valor);
-console.log('Processing Complete :');
-fila.desenfileirar();
-console.log(queue);
-
-
-
-
-

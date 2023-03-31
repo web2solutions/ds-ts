@@ -1,4 +1,6 @@
-export class FilaMap<T> {
+import { IFila } from "./IFila";
+
+export class FilaMap<T> implements IFila<T> {
   
   private fila: Map<number, T | undefined>;
 
@@ -22,13 +24,13 @@ export class FilaMap<T> {
     }
   }
 
-  enfileirar(valor: T): void {
+  public enfileirar(valor: T): void {
     this.indexFinalDaFila += 1;
     this.fila.set(this.indexFinalDaFila, valor);
     this._tamanho += 1;
   }
 
-  desenfileirar(): T | undefined {
+  public desenfileirar(): T | undefined {
     const item = this.primeiroDaFila;
     this.fila.set(this.indexComecoDaFila, undefined);
     this.indexComecoDaFila += 1;
@@ -36,25 +38,25 @@ export class FilaMap<T> {
     return item;
   }
 
-  get primeiroDaFila(): T | undefined {
+  public get primeiroDaFila(): T | undefined {
     if (this._tamanho === 0) {
       throw new Error('Fila vazia');
     }
     return this.fila.get(this.indexComecoDaFila);
   }
 
-  limpar() {
+  public limpar () {
     this.fila = new Map<number, T | undefined>();
     this.indexFinalDaFila = 0;
     this.indexComecoDaFila = -1
     this._tamanho = 0;
   }
 
-  get tamanho(): number {
+  public get tamanho(): number {
     return this._tamanho;
   }
 
-  get estaVazia(): boolean {
+  public get estaVazia(): boolean {
     return this._tamanho === 0;
   }
 }

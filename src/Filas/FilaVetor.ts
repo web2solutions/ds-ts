@@ -1,4 +1,6 @@
-export class FilaVetor<T> {
+import { IFila } from "./IFila";
+
+export class FilaVetor<T> implements IFila<T> {
   /**
    * Vetor para armazenamento dos dados
    */
@@ -41,7 +43,7 @@ export class FilaVetor<T> {
   /**
    * enfileirar item, colocar no final da fila
    */
-  enfileirar(valor: T): void {
+  public enfileirar(valor: T): void {
     // controla o final da fila que agora possui mais um elemento
     this.indexFinalDaFila += 1;
     // adiciona o elemento no final da fila
@@ -53,7 +55,7 @@ export class FilaVetor<T> {
   /**
    * desenfileirar item, tirar do começo da fila
    */
-  desenfileirar(): T | undefined {
+  public desenfileirar(): T | undefined {
     /**
      * tenta capturar o primeiro item na fila, Erro se fila está vazia
      */
@@ -79,7 +81,7 @@ export class FilaVetor<T> {
   /**
    * capturar o primeiro item da fila
    */
-  get primeiroDaFila(): T | undefined {
+  public get primeiroDaFila(): T | undefined {
     /**
      * fila não pode estar fazia
      */
@@ -95,7 +97,7 @@ export class FilaVetor<T> {
   /**
    * esvaziar a fila
    */
-  limpar() {
+  public limpar() {
     this.fila = [];
     this.indexFinalDaFila = 0;
     this.indexComecoDaFila = -1
@@ -105,14 +107,14 @@ export class FilaVetor<T> {
   /**
    * retorna tamanho da fila
    */
-  get tamanho(): number {
+  public get tamanho(): number {
     return this._tamanho;
   }
 
   /**
    * checa se fila está vazia
    */
-  get estaVazia(): boolean {
+  public get estaVazia(): boolean {
     return this._tamanho === 0;
   }
 }

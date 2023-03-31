@@ -1,18 +1,18 @@
-import { FilaMap } from '../FilaMap'
+import { FilaLigada } from '../FilaLigada'
 
 describe('suite de testes da Fila', () => {
   const valores = ['José', 'João', 'Jesus'];
-  let fila: FilaMap<string> = new FilaMap({ valores }); 
+  let fila: FilaLigada<string> = new FilaLigada({ valores }); 
   
   describe(`testar construtor`, () => {
     it('criar fila com valores iniciais somente.', () => {
-      const fila2 = new FilaMap<number>({ valores: [1, 2, 3] }); 
+      const fila2 = new FilaLigada<number>({ valores: [1, 2, 3] }); 
       expect(fila2.primeiroDaFila).toBe(1);
       expect(fila2.tamanho).toBe(3);
     });
     
     it('criar fila sem nenhum atributo. Valores padrão', () => {
-      const fila3 = new FilaMap<number>({}); 
+      const fila3 = new FilaLigada<number>({}); 
       expect(fila3.tamanho).toBe(0);
     });
   });
@@ -57,7 +57,7 @@ describe('suite de testes da Fila', () => {
     });
     
     it('a fila deve suportar limpar()', () => {
-      const fila2 = new FilaMap<number>({ valores: [1, 2, 3] }); 
+      const fila2 = new FilaLigada<number>({ valores: [1, 2, 3] }); 
       expect(fila2.primeiroDaFila).toBe(1);
       expect(fila2.tamanho).toBe(3);
       fila2.limpar();

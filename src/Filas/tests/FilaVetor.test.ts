@@ -73,7 +73,7 @@ describe('suite de testes da Fila', () => {
       fila.desenfileirar();
       fila.desenfileirar();
       fila.desenfileirar();
-      console.log(fila);
+      // console.log(fila);
       expect(fila.estaVazia).toBeTruthy();
       expect(() => {
         fila.desenfileirar();
