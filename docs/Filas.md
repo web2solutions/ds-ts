@@ -480,7 +480,11 @@ while (fila.tamanho <= max_items) {
       Tempo de execução: 165.776193 ms
       consumo aproximado: 147.30326080322266 MB
 
+- `Fila usando Lista Ligada` - 500.000 ítens
 
+      $ ts-node ts-node ./src/Filas/benchmark/FilaLigada.ts
+      Tempo de execução: 115.32131898403168 ms
+      consumo aproximado: 135.43413543701172 MB
 
 ## Repositório
 
