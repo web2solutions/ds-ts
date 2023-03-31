@@ -452,9 +452,9 @@ Memory: 32 GB 2667 MHz DDR4
 
 Considerando a idéia de `Fila usando um Vetor`, `Fila usando um Map` e `Fila usando uma Lista Ligada` citada anteriormente. Veja a seguir o benchmark para cada tipo de implementação:
 
-O programa deverá criar uma Fila contendo os ítens 'José', 'João', 'Jesus'.
+O programa deverá criar uma Fila contendo os itens 'José', 'João', 'Jesus'.
 
-Após a fila ser criada, o programa deverá empilhar novos ítens até atingir 500.000 ítens.
+Após a fila ser criada, o programa deverá empilhar novos itens até atingir 500.000 itens.
 
 ```typescript
 const max_items = 500000;
@@ -468,19 +468,19 @@ while (fila.tamanho <= max_items) {
 
 #### Resultados
 
-- `Fila usando um Vetor` - 500.000 ítens
+- `Fila usando um Vetor` - 500.000 itens
 
       $ ts-node ts-node ./src/Filas/benchmark/FilaVetor.ts
       Tempo de execução: 77.337266 ms
       consumo aproximado: 127.77216339111328 MB
 
-- `Fila usando um Map` - 500.000 ítens
+- `Fila usando um Map` - 500.000 itens
 
       $ ts-node ts-node ./src/Filas/benchmark/FilaMap.ts
       Tempo de execução: 165.776193 ms
       consumo aproximado: 147.30326080322266 MB
 
-- `Fila usando Lista Ligada` - 500.000 ítens
+- `Fila usando Lista Ligada` - 500.000 itens
 
       $ ts-node ts-node ./src/Filas/benchmark/FilaLigada.ts
       Tempo de execução: 115.32131898403168 ms
