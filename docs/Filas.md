@@ -457,7 +457,7 @@ Após a fila ser criada, o programa deverá empilhar novos ítens até atingir 5
 const max_items = 500000;
 const valores = ['José', 'João', 'Jesus'];
 
-const fila = new FilaVetor<string>({ valores }); // ou new FilaVetor({ valores })
+const fila = new FilaVetor<string>({ valores }); 
 while (fila.tamanho <= max_items) {
   fila.enfileirar(`James ${fila.tamanho}`);
 }
