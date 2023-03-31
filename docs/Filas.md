@@ -428,7 +428,7 @@ export class FilaLigada<T> implements IFila<T> {
 const max_items = 500000;
 const valores = ['José', 'João', 'Jesus'];
 
-const fila = new FilaVetor<string>({ valores }); // ou new FilaVetor({ valores })
+const fila = new FilaVetor<string>({ valores }); // ou new FilaLigada({ valores })
 while (fila.tamanho <= max_items) {
   fila.enfileirar(`James ${fila.tamanho}`);
 }
