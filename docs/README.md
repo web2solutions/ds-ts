@@ -105,3 +105,5 @@ Filas, ou queues, são estruturas de dados que suportam operações de `adição
 - https://people.cs.pitt.edu/~aus/cs1501/search-b-tree.pdf
 
 - https://pt.wikipedia.org/wiki/Topologia_em_%C3%A1rvore
+
+- https://www.ime.usp.br/~pf/algoritmos/index.html
