@@ -1,12 +1,12 @@
 
-import { ListaEncadeadaSimples } from './ListaEncadeadaSimples'
+import { ListaLigadaComArray } from './ListaLigadaComArray'
 import { No } from './No'
 
 describe('Lista Ligada / Encadeada', () => {
-    let lista: ListaEncadeadaSimples
+    let lista: ListaLigadaComArray<number>
     
     beforeEach(() => {
-        lista  = new ListaEncadeadaSimples()
+        lista  = new ListaLigadaComArray<number>()
     });
 
     describe('Checar API da Lista encadeada', () => {
@@ -46,21 +46,23 @@ describe('Lista Ligada / Encadeada', () => {
             expect(lista.cabeca?.valor).toBe(2)
         })
     
-        it('A lista deve ser capaz de retornar seu rabo', () => {
-            expect(lista.rabo).toBeDefined()
+        it('A lista deve ser capaz de retornar seu cauda', () => {
+            expect(lista.cauda).toBeDefined()
         })
     
-        it('O rabo da lista deve ser null caso esteja vazia', () => {
-            expect(lista.rabo).toBe(null)
+        it('O cauda da lista deve ser null caso esteja vazia', () => {
+            expect(lista.cauda).toBe(null)
         })
     
-        it('O rabo da lista deve apontar pro último nó', () => {
+        it('O cauda da lista deve apontar pro último nó', () => {
             lista.inserirEmPrimeiro(1)
             lista.inserirEmPrimeiro(2)
-            expect(lista.rabo?.valor).toBe(lista.nos[lista.tamanho -1].valor)
-            expect(lista.rabo).toEqual({ valor: 1, proximo: null})
-        })
-    
+            expect(lista.cauda?.valor).toBe(lista.nos[lista.tamanho -1].valor)
+            expect(lista.cauda).toEqual({ valor: 1, proximo: null})
+        })    
+    });
+
+    describe('Testar operações da lista', () => {
         it('Deve ser possível inserir um nó dado sua posição e valor', () => {
             lista.inserirEmPrimeiro(1)
             lista.inserirEmPrimeiro(2)
@@ -97,7 +99,7 @@ describe('Lista Ligada / Encadeada', () => {
         })
         
          it('Deve ser possível criar uma lista dado um nó', () => {
-            const lista2 = new ListaEncadeadaSimples({ "valor": 3, "proximo": { "valor": 2, "proximo": { "valor": 2, "proximo": null } } })
+            const lista2 = new ListaLigadaComArray({ "valor": 3, "proximo": { "valor": 2, "proximo": { "valor": 2, "proximo": null } } })
             expect(lista2.cabeca?.valor).toBe(3)
         })
     
@@ -159,5 +161,19 @@ describe('Lista Ligada / Encadeada', () => {
             lista.reverse()
             expect(lista.valores).toEqual([9, 10, 1, 2])
         })
-    });
+
+        it('Deve ser possível realizar operacoes em toda lista em ordem começando pelo primeiro No', () => {
+            lista.inserirEmPrimeiro(1)
+            lista.inserirEmPrimeiro(2)
+            lista.inserirEmUltimo(10)
+            lista.inserirEmUltimo(9)
+            lista.emordem((no: No<number>) => {
+                no.valor = Number(no.valor) + 2;
+            });
+            // console.log(lista.valores)
+            expect(lista.valores).toEqual([4, 3, 12, 11])
+            // lista.reverse()
+            // expect(lista.valores).toEqual([9, 10, 1, 2])
+        })  
+    })
   })
