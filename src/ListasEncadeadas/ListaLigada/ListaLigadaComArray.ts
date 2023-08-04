@@ -115,18 +115,11 @@ export class ListaLigadaComArray<T> {
         }
     }
 
-    /**
-     * Percorrer a ordem da lista encadeada.
-     *
-     * @public
-     * @method
-     * @param {Function} cb Callback which should be executed on each node.
-     */
     public emordem (cb: Function) {
-        var temp = this.cabeca;
-        while (temp) {
-            if (cb) cb(temp);
-            temp = temp.proximo;
+        let no = this.cabeca;
+        while (no) {
+            if (cb) cb(no);
+            no = no.proximo;
         }
     };
 }
