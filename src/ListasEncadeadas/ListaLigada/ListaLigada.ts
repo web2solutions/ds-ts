@@ -50,16 +50,44 @@ export class ListaLigada<T> {
     }
 
     public busca (valor: T): No<T> | null {
-        let no = this.cabeca;
+        let no: No<T> | null = this.cabeca;
         while (no != null && no?.valor !== valor) 
         {
             no = no.proximo;
         } 
         return no;
     }
+    
+    public remover(valor: T): boolean {
+        if (this.cabeca == null) {
+            return false;
+        }
+        let no: No<T> | null = this.cabeca;
+        let anterior: No<T> | null = null; 
+        let proximo: No<T> | null = this.cabeca.proximo;
+        for (let p:No<T> | null = no; p != null; p = p.proximo) {
+            if(p.valor === valor) {
+                proximo = p.proximo;
+                if(anterior == null) {
+                    this.cabeca = proximo
+                    if(this.cabeca == null) this.cauda = null;
+                } else {
+                    anterior.proximo = proximo
+                }
+                this.tamanho -= 1;
+                if(this.tamanho === 1) {
+                    this.cauda = this.cabeca
+                }
+                return true;
+            }
+            anterior = p;
+        }
+        return false;
+    }
+    
 
     public buscaPosicao (valor: T, celula?: No<T>): number {
-        let no = celula || this.cabeca;
+        let no: No<T> | null = celula || this.cabeca;
         let posicao = -1;
         while (no != null && no?.valor !== valor) 
         {
@@ -86,10 +114,10 @@ export class ListaLigada<T> {
 
     public emordem (cb: Function): void {
         if (!this.cabeca) return;
-        var temp: No<T> | null = this.cabeca;
-        while (temp) {
-            if (cb) cb(temp);
-            temp = temp.proximo;
+        let no: No<T> | null = this.cabeca;
+        while (no) {
+            if (cb) cb(no);
+            no = no.proximo;
         }
     };
 }

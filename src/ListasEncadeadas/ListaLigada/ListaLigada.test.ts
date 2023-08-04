@@ -48,9 +48,41 @@ describe('Lista Ligada / Encadeada', () => {
             expect(JSON.stringify(lista.cabeca)).toBe(JSON.stringify(celulaMock))
             expect(JSON.stringify(lista.cauda)).toBe(JSON.stringify(celulaMock))
         })
+        it('metodo remover - Deve ser possivel remover um valor da lista', () => {
+            expect(lista.tamanho).toBe(0)
+            lista.inserir(22);
+            expect(lista.tamanho).toBe(1);
+            lista.inserir(23);
+            expect(lista.tamanho).toBe(2)
+            lista.remover(22);
+            expect(lista.tamanho).toBe(1);
+            expect(lista.busca(22)).toBe(null);
+            const celulaMock: No<number> = { valor: 23, proximo: null};
+            expect(JSON.stringify(lista.busca(23))).toBe(JSON.stringify(celulaMock))
+        })
+        it('metodo remover - Deve ser possivel remover em uma lista com um só elemento', () => {
+            expect(lista.tamanho).toBe(0)
+            lista.inserir(22);
+            expect(lista.tamanho).toBe(1)
+            expect(lista.remover(22)).toBe(true);
+            expect(lista.tamanho).toBe(0)
+            expect(lista.cabeca).toBe(null);
+            expect(lista.cauda).toBe(null);
+        })
+        it('metodo remover - Deve ser impossivel remover um elemento não presente na lista', () => {
+            expect(lista.tamanho).toBe(0)
+            lista.inserir(22);
+            expect(lista.tamanho).toBe(1)
+            expect(lista.remover(50)).toBe(false);
+        })
+        it('metodo remover - Deve ser impossivel remover em uma lista vazia', () => {
+            expect(lista.tamanho).toBe(0)
+            expect(lista.remover(22)).toBe(false);
+        })
         it('metodo busca - Deve ser possivel buscar um valor na lista', () => {
             lista.inserir(22);
             lista.inserir(23);
+            console.log(lista)
             let celula = lista.busca(22)
             expect(celula?.valor).toBe(22)
         })
@@ -122,9 +154,10 @@ describe('Lista Ligada / Encadeada', () => {
             lista.inserirEmPrimeiro(2)
             lista.inserirEmUltimo(10)
             lista.inserirEmUltimo(9)
-            lista.emordem((no: No<number>) => {
-                no.valor = Number(no.valor) + 2;
-            });
+            const sum = function (no: No<number>) {
+                no.valor = no.valor + 2;
+            }
+            lista.emordem(sum);
             expect(lista.valores).toEqual([4, 3, 11, 12, 11])
         })  
         it('Não Deve ser possível realizar operacoes uma lista vazia', () => {

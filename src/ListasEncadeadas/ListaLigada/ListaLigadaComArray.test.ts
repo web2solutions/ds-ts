@@ -136,11 +136,25 @@ describe('Lista Ligada / Encadeada', () => {
             lista.inserirEmPrimeiro(2)
             expect(lista.busca(1)).toEqual({ valor: 1, proximo: null })
         })
+        it('Deve ser impossível buscar valor inexistente na lista', () => {
+            lista.inserirEmPrimeiro(1)
+            lista.inserirEmPrimeiro(2)
+            expect(lista.busca(10)).toEqual(null)
+        })
+        it('Deve ser impossível buscar em lista vazia', () => {
+            expect(lista.busca(10)).toEqual(null)
+        })
     
         it('Deve ser possível buscar determinado valor na lista e retornar a posição do nó associado', () => {
             lista.inserirEmPrimeiro(1)
             lista.inserirEmPrimeiro(2)
             expect(lista.buscaPosicao(1)).toBe(1)
+        })
+
+        it('Deve ser impossível buscar valor não existente', () => {
+            lista.inserirEmPrimeiro(1)
+            lista.inserirEmPrimeiro(2)
+            expect(lista.buscaPosicao(50)).toBe(-1)
         })
     
         it('Deve ser possível limpar a lista', () => {
