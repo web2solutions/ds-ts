@@ -41,27 +41,15 @@ Se `e` é o endereço da última célula da lista então  `e.proximo` vale null.
 
 Independentemente do tamanho N da fila, numa Lista Ligada simples, uma `inserção` na esquerda occore em O(1) e na direita ocorre em O(n) caso a cauda seja desconhecida ou O(1) caso a cauda seja conhecida e O(n) no meio da lista. A mesma regra se aplica para operações de `busca` e `remoção`.
 
-#### Lista.inserir (on inserirEmPrimeiro)
+#### Lista.inserir
 
-Adiciona novo objeto na cabeça da lista
+Adiciona novo objeto na lista
 
-`Complexidade de tempo`: O(1)
+`Complexidade de tempo`:
 
-`Complexidade de espaço`: O(1)
-
-#### Lista.inserirEmUltimo
-
-Adiciona novo objeto na cauda da lista
-
-`Complexidade de tempo`: O(1) caso a cauda seja conhecida ou O(n)
-
-`Complexidade de espaço`: O(1)
-
-#### Lista.inserirEm
-
-Adiciona novo objeto no meio da lista
-
-`Complexidade de tempo`: O(n)
+- Cabeça: O(1).
+- Cauda: O(n) (ou O(1) quando se tem uma referência pro fim da lista).
+- Meio: O(n).
 
 `Complexidade de espaço`: O(1)
 
