@@ -110,7 +110,7 @@ Caso a pilha esteja `cheia` e haja a tentativa de um `empilhamento` deve ocorrer
   
   `primeiro objeto a ser inserido na pilha é o último a ser removido`.
 
-  Com isso fica aberta a possibilidade de usar o início do vetor como topo e o final como base da pilha. Darei o nome á essa implementação de `Pilha inversa`.
+  Com isso fica aberta a possibilidade de usar o início do vetor como topo e o final como base da pilha. Darei o nome á essa implementação de `Pilha inversa` e que possui tempo de `O(n)` no pior cenário, pois ao remover o primeiro item do vetor, o mesmo é completamente redimensionado.
   
       topo = Pilha[0]
       base = Pilha[Pilha.length - 1]
@@ -173,6 +173,7 @@ export class Pilha <T> {
     if (this.tamanho === this.capacidade) {
       throw new Error('Pilha transbordada - Stack overflow')
     }
+    // O(1)
     this.pilha.push(valor);
     return this.pilha;
   }
@@ -182,6 +183,7 @@ export class Pilha <T> {
     if (!(this.pilha.length > 0)) {
       throw new Error('Pilha vazia');
     }
+    // O(1)
     return this.pilha.pop() as unknown as T;
   }
   
